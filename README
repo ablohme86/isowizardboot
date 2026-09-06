@@ -12,6 +12,9 @@ Features
 - Automatic USB discovery with model, device path and capacity.
 - Explicit target selection and confirmation before overwriting a device.
 - Actual progress, transfer speed, estimated time and an activity log.
+- Copy progress counts flushed data in 4 MiB batches, including device write
+  time in speed and remaining-time estimates. Verification has its own 0–100%
+  progress. There is no separate long cache-flushing phase at the end.
 - Optional SHA-256 verification by reading the contents back from USB.
 - Cancellation with a controlled shutdown of the write operation.
 

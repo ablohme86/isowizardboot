@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QObject>
+#include <QElapsedTimer>
 #include <QProcess>
 #include <QTimer>
 #include <QUrl>
@@ -60,7 +61,7 @@ private:
     double m_progress = 0;
     QString m_stage = "idle", m_status = "Ready when you are", m_detail = "Choose an image and a USB device to get started.";
     QByteArray m_pending;
-    qint64 m_stageStarted = 0;
+    QElapsedTimer m_stageTimer;
     qint64 m_done = 0, m_total = 0;
     double m_speed = 0;
     int m_remaining = -1;

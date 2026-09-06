@@ -26,7 +26,7 @@
     "Cancelling …": "Avbryter …",
     "Waiting for the current disk operation to finish. Keep the USB device connected.": "Venter på at enheten skal fullføre pågående diskoperasjon. Ikke trekk ut USB-enheten ennå.",
     "Cancellation requested.": "Avbrudd forespurt.",
-    "Writing to USB …": "Skriver til USB …",
+    "Copying to USB …": "Kopierer til USB …",
     "Verifying contents …": "Verifiserer innhold …",
     "Finishing write …": "Fullfører skriving …",
     "Flushing the disk cache. This can take a while; keep the USB device connected.": "Tømmer diskbufferen. Dette kan ta litt tid; la USB-enheten stå tilkoblet.",

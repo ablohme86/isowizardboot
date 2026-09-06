@@ -8,6 +8,7 @@
 #include <QFileInfo>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <cmath>
 
 Backend::Backend(QObject *parent) : QObject(parent)
 {
@@ -177,21 +178,18 @@ void Backend::readEvents()
         if (event.isEmpty()) continue;
         const auto stage = event["stage"].toString();
         const bool changed = stage != m_stage;
-        if (changed) m_stageStarted = QDateTime::currentMSecsSinceEpoch();
+        if (changed) m_stageTimer.start();
         m_stage = stage;
         const qint64 done = event["done"].toInteger();
         const qint64 total = event["total"].toInteger();
         const double fraction = total > 0 ? double(done) / double(total) : 0;
         if (stage == "writing" || stage == "verifying") {
-            m_progress = stage == "writing" ? fraction * (m_verify ? 0.8 : 0.98) : 0.8 + fraction * 0.19;
-            m_status = stage == "writing" ? "Writing to USB …" : "Verifying contents …";
-            const double seconds = qMax(0.1, (QDateTime::currentMSecsSinceEpoch() - m_stageStarted) / 1000.0);
+            m_progress = fraction;
+            m_status = stage == "writing" ? "Copying to USB …" : "Verifying contents …";
+            const double seconds = qMax(0.1, m_stageTimer.elapsed() / 1000.0);
             const double speed = done / seconds;
             m_done = done; m_total = total; m_speed = speed;
-            m_remaining = seconds > 1 && done > 0 ? int((total - done) / speed) : -1;
-        } else if (stage == "syncing") {
-            m_status = "Finishing write …";
-            m_detail = "Flushing the disk cache. This can take a while; keep the USB device connected.";
+            m_remaining = seconds > 1 && done > 0 ? int(std::ceil((total - done) / speed)) : -1;
         } else if (stage == "complete" || stage == "error" || stage == "cancelled") {
             m_terminalEvent = true;
             m_status = stage == "complete" ? "Your USB device is ready!" : stage == "cancelled" ? "Operation cancelled" : "Writing failed";

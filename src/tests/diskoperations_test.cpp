@@ -5,11 +5,41 @@
 #include <QTemporaryFile>
 #include <QtTest>
 #include <unistd.h>
+#include <cerrno>
+
+namespace {
+int observedTarget = -1;
+qint64 flushedBytes = 0;
+int flushCalls = 0;
+int failFlushCall = -1;
+bool interruptFlush = false;
+}
+
+extern "C" int __real_fsync(int fd);
+extern "C" int __wrap_fsync(int fd)
+{
+    if (fd == observedTarget) {
+        if (interruptFlush) { interruptFlush = false; errno = EINTR; return -1; }
+        if (++flushCalls == failFlushCall) { errno = EIO; return -1; }
+    }
+    const int result = __real_fsync(fd);
+    if (fd == observedTarget && result == 0) flushedBytes = ::lseek(fd, 0, SEEK_CUR);
+    return result;
+}
 
 class DiskOperationsTest : public QObject
 {
     Q_OBJECT
 private slots:
+    void init()
+    {
+        observedTarget = -1;
+        flushedBytes = 0;
+        flushCalls = 0;
+        failFlushCall = -1;
+        interruptFlush = false;
+    }
+
     void onlySafeDisks()
     {
         QJsonObject disk{{"name", "test-device-that-does-not-exist"}, {"path", "/dev/test-device"},
@@ -50,11 +80,46 @@ private slots:
         QVERIFY(source.flush()); QVERIFY(source.seek(0));
         QStringList stages;
         QString error;
+        observedTarget = target.handle();
+        interruptFlush = true; // Interrupted flushes must be retried.
+        qint64 lastWritten = 0;
         QVERIFY2(Disks::transfer(source.handle(), target.handle(), payload.size(), true,
-            [&](const QString &stage, qint64 done, qint64 total) { stages.append(stage); QVERIFY(done <= total); },
+            [&](const QString &stage, qint64 done, qint64 total) {
+                stages.append(stage); QVERIFY(done <= total);
+                if (stage == "writing") {
+                    QVERIFY(done >= lastWritten);
+                    QVERIFY2(done <= flushedBytes, "Progress must never include unflushed data");
+                    lastWritten = done;
+                }
+            },
             [] { return false; }, &error), qPrintable(error));
-        QVERIFY(stages.contains("writing")); QVERIFY(stages.contains("syncing")); QVERIFY(stages.contains("verifying"));
+        QCOMPARE(lastWritten, qint64(payload.size()));
+        QVERIFY(flushCalls >= 2);
+        QVERIFY(stages.contains("writing")); QVERIFY(!stages.contains("syncing")); QVERIFY(stages.contains("verifying"));
         QVERIFY(target.seek(0)); QCOMPARE(target.readAll(), payload);
+    }
+
+    void flushFailureDoesNotReportCompletion()
+    {
+        QTemporaryFile source, target;
+        QVERIFY(source.open()); QVERIFY(target.open());
+        const QByteArray payload(5 * 1024 * 1024 + 127, 'I');
+        QCOMPARE(source.write(payload), payload.size());
+        QVERIFY(source.flush()); QVERIFY(source.seek(0));
+        observedTarget = target.handle();
+        failFlushCall = 2;
+        QString error;
+        qint64 lastWritten = 0;
+        bool verificationStarted = false;
+        QVERIFY(!Disks::transfer(source.handle(), target.handle(), payload.size(), true,
+            [&](const QString &stage, qint64 done, qint64) {
+                if (stage == "writing") lastWritten = done;
+                if (stage == "verifying") verificationStarted = true;
+            }, [] { return false; }, &error));
+        QVERIFY(error.startsWith("Could not finish writing"));
+        QVERIFY(lastWritten < payload.size());
+        QVERIFY(lastWritten <= flushedBytes);
+        QVERIFY(!verificationStarted);
     }
 
     void detectsReadbackCorruption()

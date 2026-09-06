@@ -158,11 +158,14 @@ bool transfer(int source, int target, qint64 size, bool verify,
             if (result <= 0) { *error = "Write error: " + systemError(); return false; }
             written += result;
         }
+        // Count only data flushed to the device, not bytes queued in Linux's
+        // page cache. Bounded batches keep progress and cancellation responsive.
+        int syncResult;
+        do { syncResult = ::fsync(target); } while (syncResult < 0 && errno == EINTR);
+        if (syncResult < 0) { *error = "Could not finish writing to the device: " + systemError(); return false; }
         done += count;
         if (timer.elapsed() >= 100 || done == size) { progress("writing", done, size); timer.restart(); }
     }
-    progress("syncing", size, size);
-    if (::fsync(target)) { *error = "Could not finish writing to the device: " + systemError(); return false; }
     if (cancelled()) { *error = "Cancelled before verification finished."; return false; }
     if (!verify) return true;
     // Flush and invalidate the block-device cache before reading the media again.

@@ -776,7 +776,7 @@ ApplicationWindow {
                         Layout.fillWidth: true
                     }
                     Text {
-                        text: Math.round(backend.progress * 100) + "%"
+                        text: Math.floor(backend.progress * 100) + "%"
                         color: backend.stage === "complete" ? window.success : window.muted
                         font {
                             pixelSize: 15
@@ -789,7 +789,7 @@ ApplicationWindow {
                     Layout.fillWidth: true
                     Layout.topMargin: 5
                     value: backend.progress
-                    indeterminate: backend.stage === "authorizing" || backend.stage === "syncing"
+                    indeterminate: backend.stage === "authorizing"
                     background: Rectangle {
                         implicitHeight: 7
                         color: window.progressTrack
