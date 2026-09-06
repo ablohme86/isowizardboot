@@ -56,6 +56,7 @@ private:
     QList<QPair<QString, QString>> m_logs;
     qint64 m_imageSize = 0;
     bool m_busy = false, m_verify = true, m_terminalEvent = false;
+    bool m_cancelling = false;
     double m_progress = 0;
     QString m_stage = "idle", m_status = "Ready when you are", m_detail = "Choose an image and a USB device to get started.";
     QByteArray m_pending;

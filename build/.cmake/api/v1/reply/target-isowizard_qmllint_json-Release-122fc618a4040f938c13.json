@@ -23,7 +23,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 8,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -47,7 +47,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 1805,
+				"line" : 1767,
 				"parent" : 4
 			}
 		]
@@ -67,8 +67,8 @@
 	{
 		"name" : "QtInternalTargets/QmlLinter"
 	},
-	"id" : "isowizard_qmllint_module::@145eef247bfb46b6828c",
-	"name" : "isowizard_qmllint_module",
+	"id" : "isowizard_qmllint_json::@145eef247bfb46b6828c",
+	"name" : "isowizard_qmllint_json",
 	"orderDependencies" : 
 	[
 		{
@@ -106,13 +106,13 @@
 		{
 			"backtrace" : 5,
 			"isGenerated" : true,
-			"path" : "build/src/CMakeFiles/isowizard_qmllint_module",
+			"path" : "build/src/CMakeFiles/isowizard_qmllint_json",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/src/CMakeFiles/isowizard_qmllint_module.rule",
+			"path" : "build/src/CMakeFiles/isowizard_qmllint_json.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: isowizard
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -586,103 +586,123 @@ build .rcc/qmlcache/all_aotstats.aotstats .rcc/qmlcache/all_aotstats.txt | ${cma
 #############################################
 # Order-only phony target for isowizard
 
-build cmake_object_order_depends_target_isowizard: phony || generate_qmlls_build_ini_file src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp src/.qt/rcc/qrc_qmake_isowizard.cpp src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp src/isowizard/isowizard.qmltypes src/isowizard_autogen src/isowizard_autogen/mocs_compilation.cpp src/isowizard_autogen/timestamp src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan src/isowizard_qmltyperegistrations.cpp src/meta_types/isowizard_json_file_list.txt src/meta_types/isowizard_json_file_list.txt.timestamp src/meta_types/qt6isowizard_metatypes.json src/meta_types/qt6isowizard_metatypes.json.gen
+build cmake_object_order_depends_target_isowizard: phony || generate_qmlls_build_ini_file src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp src/.qt/rcc/qrc_qmake_isowizard.cpp src/.qt/rcc/qrc_translations.cpp src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp src/isowizard/isowizard.qmltypes src/isowizard_autogen src/isowizard_autogen/mocs_compilation.cpp src/isowizard_autogen/timestamp src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan src/isowizard_qmltyperegistrations.cpp src/meta_types/isowizard_json_file_list.txt src/meta_types/isowizard_json_file_list.txt.timestamp src/meta_types/qt6isowizard_metatypes.json src/meta_types/qt6isowizard_metatypes.json.gen
 
-build src/CMakeFiles/isowizard.dir/isowizard_autogen/mocs_compilation.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/isowizard_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/isowizard_autogen/mocs_compilation.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/isowizard_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/isowizard_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/isowizard_autogen
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/main.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/src/main.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/main.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/src/main.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/backend.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/src/backend.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/backend.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/src/backend.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/backend.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/diskoperations.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/src/diskoperations.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/settings.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/src/settings.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+  DEP_FILE = src/CMakeFiles/isowizard.dir/settings.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
+  OBJECT_DIR = src/CMakeFiles/isowizard.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir
+  TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
+
+build src/CMakeFiles/isowizard.dir/diskoperations.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/src/diskoperations.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/diskoperations.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/isowizard_qmltyperegistrations.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_translations.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_translations.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+  DEP_FILE = src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_translations.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
+  OBJECT_DIR = src/CMakeFiles/isowizard.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/.qt/rcc
+  TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
+
+build src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/isowizard_qmltyperegistrations.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_qmake_isowizard.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_qmake_isowizard.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_qmake_isowizard.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_qmake_isowizard.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_qmake_isowizard.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/.qt/rcc
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qmlcache_loader.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qmlcache_loader.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qmlcache_loader.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/.rcc/qmlcache
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/.rcc/qmlcache
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/.qt/rcc
   TARGET_SUPPORT_DIR = src/CMakeFiles/isowizard.dir
 
-build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp.o: CXX_COMPILER__isowizard_unscanned_Debug /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp || cmake_object_order_depends_target_isowizard
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
+build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp.o: CXX_COMPILER__isowizard_unscanned_Release /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp || cmake_object_order_depends_target_isowizard
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB
   DEP_FILE = src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
   OBJECT_FILE_DIR = src/CMakeFiles/isowizard.dir/.qt/rcc
@@ -696,10 +716,10 @@ build src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs
 #############################################
 # Link the executable src/IsoWizardBoot
 
-build src/IsoWizardBoot: CXX_EXECUTABLE_LINKER__isowizard_Debug src/CMakeFiles/isowizard.dir/isowizard_autogen/mocs_compilation.cpp.o src/CMakeFiles/isowizard.dir/main.cpp.o src/CMakeFiles/isowizard.dir/backend.cpp.o src/CMakeFiles/isowizard.dir/diskoperations.cpp.o src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_qmake_isowizard.cpp.o src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qmlcache_loader.cpp.o src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp.o | /usr/lib64/libQt6QuickControls2.so.6.11.2 /usr/lib64/libQt6Quick.so.6.11.2 /usr/lib64/libQt6OpenGL.so.6.11.2 /usr/lib64/libQt6Gui.so.6.11.2 /usr/lib64/libGLX.so /usr/lib64/libOpenGL.so /usr/lib64/libQt6Qml.so.6.11.2 /usr/lib64/libQt6Network.so.6.11.2 /usr/lib64/libQt6Core.so.6.11.2 || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
-  CONFIG = Debug
+build src/IsoWizardBoot: CXX_EXECUTABLE_LINKER__isowizard_Release src/CMakeFiles/isowizard.dir/isowizard_autogen/mocs_compilation.cpp.o src/CMakeFiles/isowizard.dir/main.cpp.o src/CMakeFiles/isowizard.dir/backend.cpp.o src/CMakeFiles/isowizard.dir/settings.cpp.o src/CMakeFiles/isowizard.dir/diskoperations.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_translations.cpp.o src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_qmake_isowizard.cpp.o src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qmlcache_loader.cpp.o src/CMakeFiles/isowizard.dir/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0.cpp.o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp.o | /usr/lib64/libQt6QuickControls2.so.6.11.2 /usr/lib64/libQt6Quick.so.6.11.2 /usr/lib64/libQt6OpenGL.so.6.11.2 /usr/lib64/libQt6Gui.so.6.11.2 /usr/lib64/libGLX.so /usr/lib64/libOpenGL.so /usr/lib64/libQt6Qml.so.6.11.2 /usr/lib64/libQt6Network.so.6.11.2 /usr/lib64/libQt6Core.so.6.11.2 || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
+  CONFIG = Release
   DEP_FILE = src/CMakeFiles/isowizard.dir/link.d
-  FLAGS = -g
+  FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=src/CMakeFiles/isowizard.dir/link.d
   LINK_LIBRARIES = -Wl,-rpath,::::::::::::::::::::::::  /usr/lib64/libQt6QuickControls2.so.6.11.2  /usr/lib64/libQt6Quick.so.6.11.2  /usr/lib64/libQt6OpenGL.so.6.11.2  /usr/lib64/libQt6Gui.so.6.11.2  /usr/lib64/libGLX.so  /usr/lib64/libOpenGL.so  /usr/lib64/libQt6Qml.so.6.11.2  /usr/lib64/libQt6Network.so.6.11.2  /usr/lib64/libQt6Core.so.6.11.2
   OBJECT_DIR = src/CMakeFiles/isowizard.dir
@@ -790,31 +810,31 @@ build src/isowizard_copy_res: phony src/CMakeFiles/isowizard_copy_res src/.qt/is
 
 build cmake_object_order_depends_target_diskoperations_test: phony || src/diskoperations_test_autogen src/diskoperations_test_autogen/mocs_compilation.cpp src/diskoperations_test_autogen/timestamp src/diskoperations_test_autogen_timestamp_deps
 
-build src/CMakeFiles/diskoperations_test.dir/diskoperations_test_autogen/mocs_compilation.cpp.o: CXX_COMPILER__diskoperations_test_unscanned_Debug /home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_diskoperations_test
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/diskoperations_test.dir/diskoperations_test_autogen/mocs_compilation.cpp.o: CXX_COMPILER__diskoperations_test_unscanned_Release /home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_diskoperations_test
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/diskoperations_test.dir/diskoperations_test_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/diskoperations_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/diskoperations_test.dir/diskoperations_test_autogen
   TARGET_SUPPORT_DIR = src/CMakeFiles/diskoperations_test.dir
 
-build src/CMakeFiles/diskoperations_test.dir/tests/diskoperations_test.cpp.o: CXX_COMPILER__diskoperations_test_unscanned_Debug /home/alexander/projects/isowizard/src/tests/diskoperations_test.cpp || cmake_object_order_depends_target_diskoperations_test
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/diskoperations_test.dir/tests/diskoperations_test.cpp.o: CXX_COMPILER__diskoperations_test_unscanned_Release /home/alexander/projects/isowizard/src/tests/diskoperations_test.cpp || cmake_object_order_depends_target_diskoperations_test
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/diskoperations_test.dir/tests/diskoperations_test.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/diskoperations_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/diskoperations_test.dir/tests
   TARGET_SUPPORT_DIR = src/CMakeFiles/diskoperations_test.dir
 
-build src/CMakeFiles/diskoperations_test.dir/diskoperations.cpp.o: CXX_COMPILER__diskoperations_test_unscanned_Debug /home/alexander/projects/isowizard/src/diskoperations.cpp || cmake_object_order_depends_target_diskoperations_test
-  CONFIG = Debug
-  DEFINES = -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/diskoperations_test.dir/diskoperations.cpp.o: CXX_COMPILER__diskoperations_test_unscanned_Release /home/alexander/projects/isowizard/src/diskoperations.cpp || cmake_object_order_depends_target_diskoperations_test
+  CONFIG = Release
+  DEFINES = -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/diskoperations_test.dir/diskoperations.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/diskoperations_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/diskoperations_test.dir
@@ -828,10 +848,10 @@ build src/CMakeFiles/diskoperations_test.dir/diskoperations.cpp.o: CXX_COMPILER_
 #############################################
 # Link the executable src/diskoperations_test
 
-build src/diskoperations_test: CXX_EXECUTABLE_LINKER__diskoperations_test_Debug src/CMakeFiles/diskoperations_test.dir/diskoperations_test_autogen/mocs_compilation.cpp.o src/CMakeFiles/diskoperations_test.dir/tests/diskoperations_test.cpp.o src/CMakeFiles/diskoperations_test.dir/diskoperations.cpp.o | /usr/lib64/libQt6Test.so.6.11.2 /usr/lib64/libQt6Core.so.6.11.2 || src/diskoperations_test_autogen src/diskoperations_test_autogen_timestamp_deps
-  CONFIG = Debug
+build src/diskoperations_test: CXX_EXECUTABLE_LINKER__diskoperations_test_Release src/CMakeFiles/diskoperations_test.dir/diskoperations_test_autogen/mocs_compilation.cpp.o src/CMakeFiles/diskoperations_test.dir/tests/diskoperations_test.cpp.o src/CMakeFiles/diskoperations_test.dir/diskoperations.cpp.o | /usr/lib64/libQt6Test.so.6.11.2 /usr/lib64/libQt6Core.so.6.11.2 || src/diskoperations_test_autogen src/diskoperations_test_autogen_timestamp_deps
+  CONFIG = Release
   DEP_FILE = src/CMakeFiles/diskoperations_test.dir/link.d
-  FLAGS = -g
+  FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=src/CMakeFiles/diskoperations_test.dir/link.d
   LINK_LIBRARIES = /usr/lib64/libQt6Test.so.6.11.2  /usr/lib64/libQt6Core.so.6.11.2
   OBJECT_DIR = src/CMakeFiles/diskoperations_test.dir
@@ -848,46 +868,66 @@ build src/diskoperations_test: CXX_EXECUTABLE_LINKER__diskoperations_test_Debug 
 #############################################
 # Order-only phony target for ui_test
 
-build cmake_object_order_depends_target_ui_test: phony || src/ui_test_autogen src/ui_test_autogen/mocs_compilation.cpp src/ui_test_autogen/timestamp src/ui_test_autogen_timestamp_deps src/ui_test_qmlimportscan
+build cmake_object_order_depends_target_ui_test: phony || src/.qt/rcc/qrc_test_translations.cpp src/ui_test_autogen src/ui_test_autogen/mocs_compilation.cpp src/ui_test_autogen/timestamp src/ui_test_autogen_timestamp_deps src/ui_test_qmlimportscan
 
-build src/CMakeFiles/ui_test.dir/ui_test_autogen/mocs_compilation.cpp.o: CXX_COMPILER__ui_test_unscanned_Debug /home/alexander/projects/isowizard/build/src/ui_test_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_ui_test
-  CONFIG = Debug
-  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/ui_test.dir/ui_test_autogen/mocs_compilation.cpp.o: CXX_COMPILER__ui_test_unscanned_Release /home/alexander/projects/isowizard/build/src/ui_test_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_ui_test
+  CONFIG = Release
+  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/ui_test.dir/ui_test_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/ui_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/ui_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/ui_test.dir/ui_test_autogen
   TARGET_SUPPORT_DIR = src/CMakeFiles/ui_test.dir
 
-build src/CMakeFiles/ui_test.dir/tests/ui_test.cpp.o: CXX_COMPILER__ui_test_unscanned_Debug /home/alexander/projects/isowizard/src/tests/ui_test.cpp || cmake_object_order_depends_target_ui_test
-  CONFIG = Debug
-  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/ui_test.dir/tests/ui_test.cpp.o: CXX_COMPILER__ui_test_unscanned_Release /home/alexander/projects/isowizard/src/tests/ui_test.cpp || cmake_object_order_depends_target_ui_test
+  CONFIG = Release
+  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/ui_test.dir/tests/ui_test.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/ui_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/ui_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/ui_test.dir/tests
   TARGET_SUPPORT_DIR = src/CMakeFiles/ui_test.dir
 
-build src/CMakeFiles/ui_test.dir/backend.cpp.o: CXX_COMPILER__ui_test_unscanned_Debug /home/alexander/projects/isowizard/src/backend.cpp || cmake_object_order_depends_target_ui_test
-  CONFIG = Debug
-  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/ui_test.dir/backend.cpp.o: CXX_COMPILER__ui_test_unscanned_Release /home/alexander/projects/isowizard/src/backend.cpp || cmake_object_order_depends_target_ui_test
+  CONFIG = Release
+  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/ui_test.dir/backend.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/ui_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/ui_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/ui_test.dir
   TARGET_SUPPORT_DIR = src/CMakeFiles/ui_test.dir
 
-build src/CMakeFiles/ui_test.dir/diskoperations.cpp.o: CXX_COMPILER__ui_test_unscanned_Debug /home/alexander/projects/isowizard/src/diskoperations.cpp || cmake_object_order_depends_target_ui_test
-  CONFIG = Debug
-  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+build src/CMakeFiles/ui_test.dir/diskoperations.cpp.o: CXX_COMPILER__ui_test_unscanned_Release /home/alexander/projects/isowizard/src/diskoperations.cpp || cmake_object_order_depends_target_ui_test
+  CONFIG = Release
+  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
   DEP_FILE = src/CMakeFiles/ui_test.dir/diskoperations.cpp.o.d
-  FLAGS = -g -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -I/home/alexander/projects/isowizard/build/src/ui_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -isystem /usr/include/qt6/QtTest
   OBJECT_DIR = src/CMakeFiles/ui_test.dir
   OBJECT_FILE_DIR = src/CMakeFiles/ui_test.dir
+  TARGET_SUPPORT_DIR = src/CMakeFiles/ui_test.dir
+
+build src/CMakeFiles/ui_test.dir/settings.cpp.o: CXX_COMPILER__ui_test_unscanned_Release /home/alexander/projects/isowizard/src/settings.cpp || cmake_object_order_depends_target_ui_test
+  CONFIG = Release
+  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+  DEP_FILE = src/CMakeFiles/ui_test.dir/settings.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -I/home/alexander/projects/isowizard/build/src/ui_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -isystem /usr/include/qt6/QtTest
+  OBJECT_DIR = src/CMakeFiles/ui_test.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/ui_test.dir
+  TARGET_SUPPORT_DIR = src/CMakeFiles/ui_test.dir
+
+build src/CMakeFiles/ui_test.dir/.qt/rcc/qrc_test_translations.cpp.o: CXX_COMPILER__ui_test_unscanned_Release /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_test_translations.cpp || cmake_object_order_depends_target_ui_test
+  CONFIG = Release
+  DEFINES = -DMAIN_QML_PATH=\"/home/alexander/projects/isowizard/src/qml/Main.qml\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\" -DQT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\" -DQT_TESTLIB_LIB
+  DEP_FILE = src/CMakeFiles/ui_test.dir/.qt/rcc/qrc_test_translations.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
+  INCLUDES = -I/home/alexander/projects/isowizard/build/src/ui_test_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -isystem /usr/include/qt6/QtTest
+  OBJECT_DIR = src/CMakeFiles/ui_test.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/ui_test.dir/.qt/rcc
   TARGET_SUPPORT_DIR = src/CMakeFiles/ui_test.dir
 
 
@@ -898,10 +938,10 @@ build src/CMakeFiles/ui_test.dir/diskoperations.cpp.o: CXX_COMPILER__ui_test_uns
 #############################################
 # Link the executable src/ui_test
 
-build src/ui_test: CXX_EXECUTABLE_LINKER__ui_test_Debug src/CMakeFiles/ui_test.dir/ui_test_autogen/mocs_compilation.cpp.o src/CMakeFiles/ui_test.dir/tests/ui_test.cpp.o src/CMakeFiles/ui_test.dir/backend.cpp.o src/CMakeFiles/ui_test.dir/diskoperations.cpp.o | /usr/lib64/libQt6QuickControls2.so.6.11.2 /usr/lib64/libQt6Test.so.6.11.2 /usr/lib64/libQt6Quick.so.6.11.2 /usr/lib64/libQt6OpenGL.so.6.11.2 /usr/lib64/libQt6Gui.so.6.11.2 /usr/lib64/libGLX.so /usr/lib64/libOpenGL.so /usr/lib64/libQt6Qml.so.6.11.2 /usr/lib64/libQt6Network.so.6.11.2 /usr/lib64/libQt6Core.so.6.11.2 || src/ui_test_autogen src/ui_test_autogen_timestamp_deps src/ui_test_qmlimportscan
-  CONFIG = Debug
+build src/ui_test: CXX_EXECUTABLE_LINKER__ui_test_Release src/CMakeFiles/ui_test.dir/ui_test_autogen/mocs_compilation.cpp.o src/CMakeFiles/ui_test.dir/tests/ui_test.cpp.o src/CMakeFiles/ui_test.dir/backend.cpp.o src/CMakeFiles/ui_test.dir/diskoperations.cpp.o src/CMakeFiles/ui_test.dir/settings.cpp.o src/CMakeFiles/ui_test.dir/.qt/rcc/qrc_test_translations.cpp.o | /usr/lib64/libQt6QuickControls2.so.6.11.2 /usr/lib64/libQt6Test.so.6.11.2 /usr/lib64/libQt6Quick.so.6.11.2 /usr/lib64/libQt6OpenGL.so.6.11.2 /usr/lib64/libQt6Gui.so.6.11.2 /usr/lib64/libGLX.so /usr/lib64/libOpenGL.so /usr/lib64/libQt6Qml.so.6.11.2 /usr/lib64/libQt6Network.so.6.11.2 /usr/lib64/libQt6Core.so.6.11.2 || src/ui_test_autogen src/ui_test_autogen_timestamp_deps src/ui_test_qmlimportscan
+  CONFIG = Release
   DEP_FILE = src/CMakeFiles/ui_test.dir/link.d
-  FLAGS = -g
+  FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=src/CMakeFiles/ui_test.dir/link.d
   LINK_LIBRARIES = /usr/lib64/libQt6QuickControls2.so.6.11.2  /usr/lib64/libQt6Test.so.6.11.2  /usr/lib64/libQt6Quick.so.6.11.2  /usr/lib64/libQt6OpenGL.so.6.11.2  /usr/lib64/libQt6Gui.so.6.11.2  /usr/lib64/libGLX.so  /usr/lib64/libOpenGL.so  /usr/lib64/libQt6Qml.so.6.11.2  /usr/lib64/libQt6Network.so.6.11.2  /usr/lib64/libQt6Core.so.6.11.2
   OBJECT_DIR = src/CMakeFiles/ui_test.dir
@@ -1039,6 +1079,15 @@ build src/ui_test_autogen: phony src/CMakeFiles/ui_test_autogen src/ui_test_auto
 
 
 #############################################
+# Custom command for src/.qt/rcc/qrc_translations.cpp
+
+build src/.qt/rcc/qrc_translations.cpp | ${cmake_ninja_workdir}src/.qt/rcc/qrc_translations.cpp: CUSTOM_COMMAND /home/alexander/projects/isowizard/src/i18n/no-NB.i18n src/.qt/rcc/translations.qrc /usr/lib64/qt6/libexec/rcc || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
+  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/lib64/qt6/libexec/rcc --output /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_translations.cpp --name translations /home/alexander/projects/isowizard/build/src/.qt/rcc/translations.qrc
+  DESC = Running rcc for resource translations
+  restat = 1
+
+
+#############################################
 # Custom command for src/meta_types/qt6isowizard_metatypes.json.gen
 
 build src/meta_types/qt6isowizard_metatypes.json.gen src/meta_types/qt6isowizard_metatypes.json | ${cmake_ninja_workdir}src/meta_types/qt6isowizard_metatypes.json.gen ${cmake_ninja_workdir}src/meta_types/qt6isowizard_metatypes.json: CUSTOM_COMMAND /usr/lib64/qt6/libexec/moc src/meta_types/isowizard_json_file_list.txt || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
@@ -1068,7 +1117,7 @@ build src/.qt/rcc/qrc_qmake_isowizard.cpp | ${cmake_ninja_workdir}src/.qt/rcc/qr
 #############################################
 # Custom command for src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp
 
-build src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp | ${cmake_ninja_workdir}src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlcachegen src/.rcc/qmlcache/isowizard_qml_loader_file_list.rsp src/.qt/rcc/qmake_isowizard.qrc src/.qt/rcc/isowizard_raw_qml_0.qrc src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
+build src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp | ${cmake_ninja_workdir}src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlcachegen src/.rcc/qmlcache/isowizard_qml_loader_file_list.rsp src/.qt/rcc/translations.qrc src/.qt/rcc/qmake_isowizard.qrc src/.qt/rcc/isowizard_raw_qml_0.qrc src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
   COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/lib64/qt6/libexec/qmlcachegen --resource-name qmlcache_isowizard -o /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp @/home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qml_loader_file_list.rsp
   DESC = Generating .rcc/qmlcache/isowizard_qmlcache_loader.cpp
   restat = 1
@@ -1077,8 +1126,8 @@ build src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp | ${cmake_ninja_workdir}sr
 #############################################
 # Custom command for src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp
 
-build src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats | ${cmake_ninja_workdir}src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp ${cmake_ninja_workdir}src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlcachegen /home/alexander/projects/isowizard/src/qml/Main.qml src/.qt/rcc/qmake_isowizard.qrc src/.qt/rcc/isowizard_raw_qml_0.qrc src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc src/isowizard/isowizard.qmltypes src/isowizard/qmldir || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
-  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E make_directory /home/alexander/projects/isowizard/build/src/.rcc/qmlcache && /usr/lib64/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/isowizard/qml/Main.qml -I /home/alexander/projects/isowizard/build/src -I /usr/lib64/qt6/qml -i /home/alexander/projects/isowizard/build/src/isowizard/qmldir --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/qmake_isowizard.qrc --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0.qrc --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=isowizard(isowizard)" -o /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp /home/alexander/projects/isowizard/src/qml/Main.qml
+build src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats | ${cmake_ninja_workdir}src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp ${cmake_ninja_workdir}src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlcachegen /home/alexander/projects/isowizard/src/qml/Main.qml src/.qt/rcc/translations.qrc src/.qt/rcc/qmake_isowizard.qrc src/.qt/rcc/isowizard_raw_qml_0.qrc src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc src/isowizard/isowizard.qmltypes src/isowizard/qmldir || generate_qmlls_build_ini_file src/isowizard_autogen src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
+  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E make_directory /home/alexander/projects/isowizard/build/src/.rcc/qmlcache && /usr/lib64/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/isowizard/qml/Main.qml -I /home/alexander/projects/isowizard/build/src -I /usr/lib64/qt6/qml -i /home/alexander/projects/isowizard/build/src/isowizard/qmldir --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/translations.qrc --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/qmake_isowizard.qrc --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0.qrc --resource /home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=isowizard(isowizard)" -o /home/alexander/projects/isowizard/build/src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp /home/alexander/projects/isowizard/src/qml/Main.qml
   DESC = Generating .rcc/qmlcache/isowizard_qml_Main_qml.cpp, .rcc/qmlcache/isowizard_qml_Main_qml.cpp.aotstats
   restat = 1
 
@@ -1105,7 +1154,7 @@ build src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp | ${cmake_ninja_work
 # Custom command for src/isowizard_autogen/timestamp
 
 build src/isowizard_autogen/timestamp src/isowizard_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}src/isowizard_autogen/timestamp ${cmake_ninja_workdir}src/isowizard_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib64/qt6/libexec/moc || generate_qmlls_build_ini_file src/isowizard_autogen_timestamp_deps src/isowizard_copy_qml src/isowizard_copy_res src/isowizard_qmlimportscan
-  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E cmake_autogen /home/alexander/projects/isowizard/build/src/CMakeFiles/isowizard_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/alexander/projects/isowizard/build/src/isowizard_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/alexander/projects/isowizard /home/alexander/projects/isowizard/src /home/alexander/projects/isowizard/build /home/alexander/projects/isowizard/build/src /home/alexander/projects/isowizard/build/src/isowizard_autogen/deps /home/alexander/projects/isowizard/build/CMakeFiles/d/fced255c55e010a0633c1f9d84c7753e7ef10dcae9bb2d504805f37f8fbd12c1.d
+  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E cmake_autogen /home/alexander/projects/isowizard/build/src/CMakeFiles/isowizard_autogen.dir/AutogenInfo.json Release && /usr/bin/cmake -E touch /home/alexander/projects/isowizard/build/src/isowizard_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/alexander/projects/isowizard /home/alexander/projects/isowizard/src /home/alexander/projects/isowizard/build /home/alexander/projects/isowizard/build/src /home/alexander/projects/isowizard/build/src/isowizard_autogen/deps /home/alexander/projects/isowizard/build/CMakeFiles/d/fced255c55e010a0633c1f9d84c7753e7ef10dcae9bb2d504805f37f8fbd12c1.d
   DESC = Automatic MOC and UIC for target isowizard
   depfile = CMakeFiles/d/fced255c55e010a0633c1f9d84c7753e7ef10dcae9bb2d504805f37f8fbd12c1.d
   deps = gcc
@@ -1205,7 +1254,7 @@ build src/.qt/isowizard_res.txt | ${cmake_ninja_workdir}src/.qt/isowizard_res.tx
 # Custom command for src/diskoperations_test_autogen/timestamp
 
 build src/diskoperations_test_autogen/timestamp src/diskoperations_test_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}src/diskoperations_test_autogen/timestamp ${cmake_ninja_workdir}src/diskoperations_test_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib64/qt6/libexec/moc || src/diskoperations_test_autogen_timestamp_deps
-  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E cmake_autogen /home/alexander/projects/isowizard/build/src/CMakeFiles/diskoperations_test_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/alexander/projects/isowizard /home/alexander/projects/isowizard/src /home/alexander/projects/isowizard/build /home/alexander/projects/isowizard/build/src /home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/deps /home/alexander/projects/isowizard/build/CMakeFiles/d/9f6cd61c0b4214f2cad24694032dccac85f1b28231cfac75496e177cad581df7.d
+  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E cmake_autogen /home/alexander/projects/isowizard/build/src/CMakeFiles/diskoperations_test_autogen.dir/AutogenInfo.json Release && /usr/bin/cmake -E touch /home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/alexander/projects/isowizard /home/alexander/projects/isowizard/src /home/alexander/projects/isowizard/build /home/alexander/projects/isowizard/build/src /home/alexander/projects/isowizard/build/src/diskoperations_test_autogen/deps /home/alexander/projects/isowizard/build/CMakeFiles/d/9f6cd61c0b4214f2cad24694032dccac85f1b28231cfac75496e177cad581df7.d
   DESC = Automatic MOC and UIC for target diskoperations_test
   depfile = CMakeFiles/d/9f6cd61c0b4214f2cad24694032dccac85f1b28231cfac75496e177cad581df7.d
   deps = gcc
@@ -1213,10 +1262,19 @@ build src/diskoperations_test_autogen/timestamp src/diskoperations_test_autogen/
 
 
 #############################################
+# Custom command for src/.qt/rcc/qrc_test_translations.cpp
+
+build src/.qt/rcc/qrc_test_translations.cpp | ${cmake_ninja_workdir}src/.qt/rcc/qrc_test_translations.cpp: CUSTOM_COMMAND /home/alexander/projects/isowizard/src/i18n/no-NB.i18n src/.qt/rcc/test_translations.qrc /usr/lib64/qt6/libexec/rcc || src/ui_test_autogen src/ui_test_autogen_timestamp_deps src/ui_test_qmlimportscan
+  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/lib64/qt6/libexec/rcc --output /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_test_translations.cpp --name test_translations /home/alexander/projects/isowizard/build/src/.qt/rcc/test_translations.qrc
+  DESC = Running rcc for resource test_translations
+  restat = 1
+
+
+#############################################
 # Custom command for src/ui_test_autogen/timestamp
 
 build src/ui_test_autogen/timestamp src/ui_test_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}src/ui_test_autogen/timestamp ${cmake_ninja_workdir}src/ui_test_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib64/qt6/libexec/moc || src/ui_test_autogen_timestamp_deps src/ui_test_qmlimportscan
-  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E cmake_autogen /home/alexander/projects/isowizard/build/src/CMakeFiles/ui_test_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/alexander/projects/isowizard/build/src/ui_test_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/alexander/projects/isowizard /home/alexander/projects/isowizard/src /home/alexander/projects/isowizard/build /home/alexander/projects/isowizard/build/src /home/alexander/projects/isowizard/build/src/ui_test_autogen/deps /home/alexander/projects/isowizard/build/CMakeFiles/d/1ee147775bd9a76b0e6aee5532a19bcd9339c10fca23bdd12c93361939942e2f.d
+  COMMAND = cd /home/alexander/projects/isowizard/build/src && /usr/bin/cmake -E cmake_autogen /home/alexander/projects/isowizard/build/src/CMakeFiles/ui_test_autogen.dir/AutogenInfo.json Release && /usr/bin/cmake -E touch /home/alexander/projects/isowizard/build/src/ui_test_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/alexander/projects/isowizard /home/alexander/projects/isowizard/src /home/alexander/projects/isowizard/build /home/alexander/projects/isowizard/build/src /home/alexander/projects/isowizard/build/src/ui_test_autogen/deps /home/alexander/projects/isowizard/build/CMakeFiles/d/1ee147775bd9a76b0e6aee5532a19bcd9339c10fca23bdd12c93361939942e2f.d
   DESC = Automatic MOC and UIC for target ui_test
   depfile = CMakeFiles/d/1ee147775bd9a76b0e6aee5532a19bcd9339c10fca23bdd12c93361939942e2f.d
   deps = gcc
@@ -1232,7 +1290,7 @@ build src/CMakeFiles/ui_test_qmlimportscan | ${cmake_ninja_workdir}src/CMakeFile
 #############################################
 # Custom command for src/.qt/qml_imports/ui_test_build.cmake
 
-build src/.qt/qml_imports/ui_test_build.cmake | ${cmake_ninja_workdir}src/.qt/qml_imports/ui_test_build.cmake: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlimportscanner
+build src/.qt/qml_imports/ui_test_build.cmake | ${cmake_ninja_workdir}src/.qt/qml_imports/ui_test_build.cmake: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlimportscanner src/.qt/rcc/test_translations.qrc
   COMMAND = cd /home/alexander/projects/isowizard/src && /usr/lib64/qt6/libexec/qmlimportscanner @/home/alexander/projects/isowizard/build/src/.qt/qml_imports/ui_test_build.rsp
   DESC = Running qmlimportscanner for ui_test
   restat = 1
@@ -1247,7 +1305,7 @@ build src/CMakeFiles/isowizard_qmlimportscan | ${cmake_ninja_workdir}src/CMakeFi
 #############################################
 # Custom command for src/.qt/qml_imports/isowizard_build.cmake
 
-build src/.qt/qml_imports/isowizard_build.cmake | ${cmake_ninja_workdir}src/.qt/qml_imports/isowizard_build.cmake: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlimportscanner src/.qt/rcc/qmake_isowizard.qrc src/.qt/rcc/isowizard_raw_qml_0.qrc src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc /home/alexander/projects/isowizard/src/qml/Main.qml
+build src/.qt/qml_imports/isowizard_build.cmake | ${cmake_ninja_workdir}src/.qt/qml_imports/isowizard_build.cmake: CUSTOM_COMMAND /usr/lib64/qt6/libexec/qmlimportscanner src/.qt/rcc/translations.qrc src/.qt/rcc/qmake_isowizard.qrc src/.qt/rcc/isowizard_raw_qml_0.qrc src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc /home/alexander/projects/isowizard/src/qml/Main.qml
   COMMAND = cd /home/alexander/projects/isowizard/src && /usr/lib64/qt6/libexec/qmlimportscanner @/home/alexander/projects/isowizard/build/src/.qt/qml_imports/isowizard_build.rsp
   DESC = Running qmlimportscanner for isowizard
   restat = 1
@@ -1359,7 +1417,7 @@ build /home/alexander/projects/isowizard/CMakeLists.txt /home/alexander/projects
 # Clean additional files.
 
 build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
-  CONFIG = Debug
+  CONFIG = Release
 
 
 #############################################

@@ -12,8 +12,10 @@
 #include <cerrno>
 #include <cstring>
 #include <fcntl.h>
+#include <grp.h>
 #include <linux/fs.h>
 #include <poll.h>
+#include <pwd.h>
 #include <sys/ioctl.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -212,10 +214,16 @@ int runWriter(const QStringList &arguments)
     // Open the source with the invoking user's permissions, not root's permissions.
     bool uidOk = false;
     const uint callerUid = qEnvironmentVariable("PKEXEC_UID").toUInt(&uidOk);
-    if (!uidOk || ::seteuid(callerUid)) return fail("Could not check access to the image.");
+    const auto *caller = uidOk ? ::getpwuid(callerUid) : nullptr;
+    const gid_t privilegedGid = ::getegid();
+    if (!caller || ::initgroups(caller->pw_name, caller->pw_gid) || ::setegid(caller->pw_gid) || ::seteuid(callerUid))
+        return fail("Could not check access to the image.");
     const int source = ::open(QFile::encodeName(imagePath).constData(), O_RDONLY | O_CLOEXEC | O_NOFOLLOW | O_NONBLOCK);
     const int sourceErrno = errno;
-    if (::seteuid(0)) { if (source >= 0) ::close(source); return fail("Could not restore write permissions."); }
+    if (::seteuid(0) || ::setegid(privilegedGid) || ::setgroups(0, nullptr)) {
+        if (source >= 0) ::close(source);
+        return fail("Could not restore write permissions.");
+    }
     if (source < 0) { errno = sourceErrno; return fail("Could not open the image: " + systemError()); }
     struct stat sourceInfo{};
     if (::fstat(source, &sourceInfo) || !S_ISREG(sourceInfo.st_mode) || identity(sourceInfo) != expectedImage

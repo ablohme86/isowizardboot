@@ -41,6 +41,7 @@
 			"qt6_extract_metatypes",
 			"_qt_internal_process_resource",
 			"qt6_add_resources",
+			"qt_add_resources",
 			"_qt_internal_ensure_tooling_target",
 			"target_include_directories",
 			"target_sources",
@@ -100,13 +101,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 19,
+				"line" : 21,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 16,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
@@ -249,7 +250,7 @@
 			{
 				"command" : 15,
 				"file" : 1,
-				"line" : 8,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -439,6 +440,84 @@
 				"parent" : 64
 			},
 			{
+				"command" : 31,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 30,
+				"file" : 0,
+				"line" : 499,
+				"parent" : 66
+			},
+			{
+				"command" : 29,
+				"file" : 0,
+				"line" : 419,
+				"parent" : 67
+			},
+			{
+				"command" : 26,
+				"file" : 0,
+				"line" : 2605,
+				"parent" : 68
+			},
+			{
+				"command" : 26,
+				"file" : 0,
+				"line" : 1505,
+				"parent" : 64
+			},
+			{
+				"command" : 32,
+				"file" : 13,
+				"line" : 1031,
+				"parent" : 34
+			},
+			{
+				"command" : 16,
+				"file" : 13,
+				"line" : 3251,
+				"parent" : 71
+			},
+			{
+				"command" : 33,
+				"file" : 13,
+				"line" : 4383,
+				"parent" : 62
+			},
+			{
+				"command" : 33,
+				"file" : 13,
+				"line" : 4413,
+				"parent" : 62
+			},
+			{
+				"command" : 35,
+				"file" : 0,
+				"line" : 2666,
+				"parent" : 68
+			},
+			{
+				"command" : 34,
+				"file" : 0,
+				"line" : 2206,
+				"parent" : 75
+			},
+			{
+				"command" : 34,
+				"file" : 0,
+				"line" : 1613,
+				"parent" : 64
+			},
+			{
+				"command" : 34,
+				"file" : 13,
+				"line" : 4374,
+				"parent" : 62
+			},
+			{
 				"command" : 30,
 				"file" : 13,
 				"line" : 962,
@@ -448,82 +527,34 @@
 				"command" : 29,
 				"file" : 0,
 				"line" : 419,
-				"parent" : 66
+				"parent" : 79
 			},
 			{
-				"command" : 26,
+				"command" : 35,
 				"file" : 0,
-				"line" : 2605,
-				"parent" : 67
-			},
-			{
-				"command" : 26,
-				"file" : 0,
-				"line" : 1505,
-				"parent" : 64
-			},
-			{
-				"command" : 31,
-				"file" : 13,
-				"line" : 1031,
-				"parent" : 34
-			},
-			{
-				"command" : 16,
-				"file" : 13,
-				"line" : 3251,
-				"parent" : 70
-			},
-			{
-				"command" : 32,
-				"file" : 13,
-				"line" : 4383,
-				"parent" : 62
-			},
-			{
-				"command" : 32,
-				"file" : 13,
-				"line" : 4413,
-				"parent" : 62
-			},
-			{
-				"command" : 33,
-				"file" : 0,
-				"line" : 1613,
-				"parent" : 64
-			},
-			{
-				"command" : 33,
-				"file" : 13,
-				"line" : 4374,
-				"parent" : 62
+				"line" : 2666,
+				"parent" : 80
 			},
 			{
 				"command" : 34,
 				"file" : 0,
-				"line" : 2666,
-				"parent" : 67
-			},
-			{
-				"command" : 33,
-				"file" : 0,
 				"line" : 2206,
-				"parent" : 76
+				"parent" : 81
 			},
 			{
-				"command" : 33,
+				"command" : 34,
 				"file" : 13,
 				"line" : 3700,
 				"parent" : 58
 			},
 			{
-				"command" : 33,
+				"command" : 34,
 				"file" : 13,
 				"line" : 1980,
 				"parent" : 59
 			},
 			{
-				"command" : 33,
+				"command" : 34,
 				"file" : 13,
 				"line" : 3914,
 				"parent" : 58
@@ -538,19 +569,19 @@
 				"command" : 29,
 				"file" : 0,
 				"line" : 419,
-				"parent" : 81
+				"parent" : 86
+			},
+			{
+				"command" : 35,
+				"file" : 0,
+				"line" : 2666,
+				"parent" : 87
 			},
 			{
 				"command" : 34,
 				"file" : 0,
-				"line" : 2666,
-				"parent" : 82
-			},
-			{
-				"command" : 33,
-				"file" : 0,
 				"line" : 2206,
-				"parent" : 83
+				"parent" : 88
 			},
 			{
 				"command" : 30,
@@ -562,31 +593,31 @@
 				"command" : 29,
 				"file" : 0,
 				"line" : 419,
-				"parent" : 85
+				"parent" : 90
+			},
+			{
+				"command" : 35,
+				"file" : 0,
+				"line" : 2666,
+				"parent" : 91
 			},
 			{
 				"command" : 34,
 				"file" : 0,
-				"line" : 2666,
-				"parent" : 86
-			},
-			{
-				"command" : 33,
-				"file" : 0,
 				"line" : 2206,
-				"parent" : 87
+				"parent" : 92
 			},
 			{
-				"command" : 35,
+				"command" : 36,
 				"file" : 0,
 				"line" : 892,
 				"parent" : 52
 			},
 			{
-				"command" : 33,
+				"command" : 34,
 				"file" : 0,
 				"line" : 2331,
-				"parent" : 89
+				"parent" : 94
 			}
 		]
 	},
@@ -628,7 +659,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17"
+					"fragment" : "-O3 -DNDEBUG -std=gnu++17"
 				}
 			],
 			"defines" : 
@@ -644,6 +675,10 @@
 				{
 					"backtrace" : 35,
 					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 43,
+					"define" : "QT_NO_DEBUG"
 				},
 				{
 					"backtrace" : 6,
@@ -673,36 +708,36 @@
 					"path" : "/home/alexander/projects/isowizard/build/src/isowizard_autogen/include"
 				},
 				{
-					"backtrace" : 72,
+					"backtrace" : 73,
 					"path" : "/home/alexander/projects/isowizard/src"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 74,
 					"isSystem" : true,
 					"path" : "/usr/include/qt6/QtQml"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 74,
 					"isSystem" : true,
 					"path" : "/usr/include/qt6"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 74,
 					"isSystem" : true,
 					"path" : "/usr/include/qt6/QtCore"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 74,
 					"isSystem" : true,
 					"path" : "/usr/lib64/qt6/mkspecs/linux-g++"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 74,
 					"isSystem" : true,
 					"path" : "/usr/include/qt6/QtQmlIntegration"
 				},
 				{
-					"backtrace" : 73,
+					"backtrace" : 74,
 					"isSystem" : true,
 					"path" : "/usr/include/qt6/QtNetwork"
 				},
@@ -743,12 +778,14 @@
 				1,
 				2,
 				4,
-				7,
+				6,
 				8,
 				10,
 				11,
-				12,
-				13
+				13,
+				14,
+				15,
+				16
 			]
 		}
 	],
@@ -806,7 +843,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-O3 -DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -905,11 +942,11 @@
 			"id" : "Qt6::moc::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 68,
+			"backtrace" : 69,
 			"id" : "Qt6::rcc::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 69,
+			"backtrace" : 70,
 			"id" : "Qt6::cmake_automoc_parser::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -917,7 +954,7 @@
 			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 71,
+			"backtrace" : 72,
 			"id" : "isowizard_tooling::@145eef247bfb46b6828c"
 		},
 		{
@@ -944,17 +981,19 @@
 			"sourceIndexes" : 
 			[
 				0,
-				6,
-				7,
 				8,
+				9,
 				10,
 				11,
-				12,
 				13,
 				14,
+				15,
 				16,
 				17,
-				19
+				19,
+				21,
+				22,
+				24
 			]
 		},
 		{
@@ -964,7 +1003,8 @@
 				1,
 				2,
 				4,
-				9
+				6,
+				12
 			]
 		},
 		{
@@ -972,30 +1012,33 @@
 			"sourceIndexes" : 
 			[
 				3,
-				5
+				5,
+				7
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				15,
-				18
+				18,
+				20,
+				23
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				20,
-				21,
-				22,
-				23,
-				24,
 				25,
 				26,
 				27,
-				28
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34
 			]
 		},
 		{
@@ -1006,13 +1049,13 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				29,
-				30,
-				31,
-				32,
-				33,
-				34,
-				35
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41
 			]
 		}
 	],
@@ -1045,6 +1088,17 @@
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
+			"path" : "src/settings.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "src/settings.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
 			"path" : "src/diskoperations.cpp",
 			"sourceGroupIndex" : 1
 		},
@@ -1054,84 +1108,102 @@
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 74,
+			"backtrace" : 76,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/.qt/rcc/qrc_translations.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 77,
 			"isGenerated" : true,
 			"path" : "build/src/meta_types/qt6isowizard_metatypes.json.gen",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 75,
+			"backtrace" : 78,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/src/isowizard_qmltyperegistrations.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 77,
+			"backtrace" : 82,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/src/.qt/rcc/qrc_qmake_isowizard.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 78,
+			"backtrace" : 83,
 			"path" : "src/qml/Main.qml",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 79,
+			"backtrace" : 84,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/src/.rcc/qmlcache/isowizard_qmlcache_loader.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 80,
+			"backtrace" : 85,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/src/.rcc/qmlcache/isowizard_qml_Main_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 84,
+			"backtrace" : 89,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 88,
+			"backtrace" : 93,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 95,
+			"isGenerated" : true,
+			"path" : "build/src/.qt/rcc/translations.qrc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 95,
+			"path" : "src/i18n/no-NB.i18n",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 95,
 			"isGenerated" : true,
 			"path" : "build/src/.qt/rcc/qmake_isowizard.qrc",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 95,
 			"isGenerated" : true,
 			"path" : "build/src/isowizard/qmldir",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 95,
 			"isGenerated" : true,
 			"path" : "build/src/.qt/rcc/isowizard_raw_qml_0.qrc",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 95,
 			"isGenerated" : true,
 			"path" : "build/src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 95,
 			"isGenerated" : true,
 			"path" : "build/src/isowizard/qml/qmldir",
 			"sourceGroupIndex" : 3
@@ -1141,6 +1213,12 @@
 			"isGenerated" : true,
 			"path" : "build/src/isowizard_autogen/timestamp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/src/.qt/rcc/qrc_translations.cpp.rule",
+			"sourceGroupIndex" : 4
 		},
 		{
 			"backtrace" : 0,

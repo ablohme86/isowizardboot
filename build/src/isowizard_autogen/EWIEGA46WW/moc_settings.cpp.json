@@ -1,0 +1,72 @@
+{
+    "classes": [
+        {
+            "className": "Settings",
+            "lineNumber": 17,
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 20,
+                    "name": "language",
+                    "notify": "languageChanged",
+                    "override": false,
+                    "read": "language",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "virtual": false,
+                    "write": "setLanguage"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "lineNumber": 21,
+                    "name": "theme",
+                    "notify": "themeChanged",
+                    "override": false,
+                    "read": "theme",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "virtual": false,
+                    "write": "setTheme"
+                }
+            ],
+            "qualifiedClassName": "Settings",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "lineNumber": 30,
+                    "name": "languageChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "lineNumber": 31,
+                    "name": "themeChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "settings.h",
+    "outputRevision": 69
+}

@@ -1,70 +1,88 @@
 IsoWizardBoot
 =============
 
-Native Linux-app i Qt 6 / QML for å skrive oppstartsbilder til USB.
+A native Qt 6 / QML application for writing boot images to USB devices on Linux.
 
-Funksjoner
-----------
-- Mørkt, norsk grensesnitt med filvelger og dra-og-slipp for ISO/IMG.
-- Automatisk USB-oppdagelse, enhetsmodell, disksti og kapasitet.
-- Eksplisitt valg av mål og bekreftelse før hele enheten overskrives.
-- Reell fremdrift, hastighet, estimert tid og aktivitetslogg.
-- Valgfri SHA-256-verifisering ved å lese tilbake innholdet fra USB.
-- Avbryt med kontrollert avslutning av skriveprosessen.
+Features
+--------
+- English interface with an ISO/IMG picker and drag-and-drop support.
+- Settings > Languages: English and Norwegian Bokmål, applied immediately.
+- Settings > Appearance: dark and light themes, including dialogs and menus.
+- Language and theme preferences are saved between launches.
+- Automatic USB discovery with model, device path and capacity.
+- Explicit target selection and confirmation before overwriting a device.
+- Actual progress, transfer speed, estimated time and an activity log.
+- Optional SHA-256 verification by reading the contents back from USB.
+- Cancellation with a controlled shutdown of the write operation.
 
-Kompatibilitet
---------------
-Programmet skriver ukomprimerte bildefiler direkte til hele USB-enheten,
-tilsvarende dd. Bruk USB-kompatible hybrid-ISO-er (f.eks. Linux-installasjon)
-eller rå IMG-filer. Partisjonstabell, filsystem og BIOS/UEFI-støtte følger
-bildefilen. Programmet konverterer ikke vilkårlige ISO-filer til oppstartsbilder,
-oppretter ikke persistens og støtter ikke vanlige Windows-installasjons-ISO-er.
-At en fil har .iso-endelse garanterer ikke at den kan starte fra USB.
+Compatibility
+-------------
+The application writes uncompressed images directly to a whole USB device,
+similar to dd. Use USB-compatible hybrid ISOs (such as Linux installation
+images) or raw IMG files. The image determines the partition table, filesystem,
+and BIOS/UEFI support. The app does not convert arbitrary ISOs into bootable
+USB images, create persistence, or support standard Windows installation ISOs.
+An .iso extension alone does not guarantee that an image can boot from USB.
 
-Forutsetninger
---------------
-Linux med kernel 5.15 eller nyere (disksekvensidentifikasjon), CMake >= 3.16,
-C++17-kompilator, Qt >= 6.5 med Quick, QuickControls2, Quick Dialogs og Qt Test
-(for tester), util-linux (lsblk) og polkit (pkexec). En polkit-agent må kjøre
-i skrivebordsøkten. Appen kjører normalt uten root; bare skriveprosessen
-ber om administratorgodkjenning gjennom pkexec.
+Requirements
+------------
+Linux kernel 5.15 or later (disk sequence identification), CMake >= 3.16,
+a C++17 compiler, Qt >= 6.5 with Quick, QuickControls2, Quick Dialogs and Qt Test
+(for tests), util-linux (lsblk), and polkit (pkexec). A polkit authentication
+agent must be running in the desktop session. The app runs without root;
+only the writer requests administrator approval through pkexec.
 
-Bygg og start
+Build and run
 -------------
     cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
     cmake --build build -j
     ctest --test-dir build --output-on-failure
     ./build/src/IsoWizardBoot
 
-Uten tester: legg til -DBUILD_TESTING=OFF ved konfigurering.
-Forhåndsvelg bildefil: ./build/src/IsoWizardBoot --image /sti/til/bilde.iso
+To omit tests, configure with -DBUILD_TESTING=OFF.
+To preselect an image: ./build/src/IsoWizardBoot --image /path/to/image.iso
 
-Bruk
-----
-1. Velg en ISO- eller IMG-fil.
-2. Velg riktig USB-enhet. Eksterne USB-harddisker vises også.
-3. Hvis den er montert, avmonter alle partisjonene i filbehandleren uten å
-   koble fra selve USB-enheten. Bildefilen må ligge på en annen disk.
-4. Velg om innholdet skal verifiseres, og klikk «Skriv til USB».
-5. Bekreft enheten og slettingen, og godkjenn systemets administratordialog.
-6. Vent på fullført skriving/verifisering før du løser ut USB-enheten.
+Usage
+-----
+1. Select an ISO or IMG file.
+2. Select the correct USB device. External USB hard drives are also listed.
+3. If mounted, unmount all its partitions in your file manager while keeping
+   the USB device connected. Store the source image on a different disk.
+4. Choose whether to verify the contents, then click Write to USB.
+5. Confirm the target and data erasure, then approve the system's administrator
+   access dialog.
+6. Wait for writing/verification to finish before ejecting the USB device.
 
-Sikkerhetskontroller
--------------------
-Interne disker, skrivebeskyttede disker og enheter med systempartisjoner,
-swap eller aktive device-mapper-brukere filtreres bort. Monterte mål avvises.
-Skriveprosessen kontrollerer målkapasitet, serienummer og kernelens disksekvens
-på nytt etter godkjenning og disksekvens etter eksklusiv åpning. Den kontrollerer
-også bildefilens identitet og åpner kilden med den opprinnelige brukerens tilgang.
-Målet må være en ekte blokkenhet, ikke en vanlig fil eller symbolsk lenke.
+Languages and themes
+--------------------
+Open Settings in the sidebar to change Languages or Appearance. English and
+the dark theme are the defaults. Preferences are stored using Qt QSettings.
 
-Tester
-------
-Testene skriver bare til midlertidige filer. De sjekker diskfiltrering,
-bytekorrekt kopiering, verifiseringsfeil, avbrudd, avkortede kilder,
-filidentitet, UI-tilstander og bekreftelsesdialog. UI-testen leser enhetslisten,
-men starter aldri en reell skriveprosess. Ingen USB-skriving inngår i testene.
+src/i18n/no-NB.i18n is a UTF-8 JSON translation file. Its translations object
+maps English source strings to Norwegian Bokmål. The requested filename and
+language ID are no-NB; the corresponding standard locale is nb-NO. Placeholder
+strings such as %1 and %2 must be preserved. Missing keys fall back to English.
+The file is embedded in the executable at build time; rebuild after editing it.
+QML uses qsTr(), and a JSON-backed QTranslator applies the translations live.
+Colors are defined in one theme palette at the top of src/qml/Main.qml.
 
-Ta et skjermbilde uten å åpne et vindu på skrivebordet:
+Safety checks
+-------------
+Internal disks, read-only devices, and disks containing system mounts, swap,
+or active device-mapper users are filtered out. Mounted targets are rejected.
+The writer rechecks capacity, serial number and the kernel disk sequence after
+approval, and verifies the disk sequence again after exclusive opening. It
+checks source identity and opens the image with the invoking user's access.
+The target must be an actual block device, not a regular file or symlink.
+
+Tests
+-----
+The tests write only to temporary files. They cover device filtering,
+byte-for-byte copying, readback corruption, cancellation, truncated sources,
+file identity, UI states, the confirmation dialog, live language/theme changes,
+and preference persistence. The UI test reads the device list but never starts
+a real writer. No USB writing is performed by the test suite.
+
+Capture the application without opening a desktop window:
     QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software \
       ./build/src/IsoWizardBoot --screenshot /tmp/isowizardboot.png

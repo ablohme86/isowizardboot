@@ -7,6 +7,8 @@ ui_test_autogen/timestamp: \
 	/home/alexander/projects/isowizard/src/backend.h \
 	/home/alexander/projects/isowizard/src/diskoperations.cpp \
 	/home/alexander/projects/isowizard/src/diskoperations.h \
+	/home/alexander/projects/isowizard/src/settings.cpp \
+	/home/alexander/projects/isowizard/src/settings.h \
 	/home/alexander/projects/isowizard/src/tests/ui_test.cpp \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/bitsperlong.h \
@@ -127,6 +129,7 @@ ui_test_autogen/timestamp: \
 	/usr/include/c++/16/bits/localefwd.h \
 	/usr/include/c++/16/bits/memory_resource.h \
 	/usr/include/c++/16/bits/memoryfwd.h \
+	/usr/include/c++/16/bits/monostate.h \
 	/usr/include/c++/16/bits/move.h \
 	/usr/include/c++/16/bits/nested_exception.h \
 	/usr/include/c++/16/bits/new_allocator.h \
@@ -235,6 +238,8 @@ ui_test_autogen/timestamp: \
 	/usr/include/c++/16/numeric \
 	/usr/include/c++/16/optional \
 	/usr/include/c++/16/pstl/execution_defs.h \
+	/usr/include/c++/16/pstl/glue_algorithm_defs.h \
+	/usr/include/c++/16/pstl/glue_memory_defs.h \
 	/usr/include/c++/16/pstl/glue_numeric_defs.h \
 	/usr/include/c++/16/pstl/pstl_config.h \
 	/usr/include/c++/16/random \
@@ -299,6 +304,7 @@ ui_test_autogen/timestamp: \
 	/usr/include/qt6/QtCore/QFlags \
 	/usr/include/qt6/QtCore/QHash \
 	/usr/include/qt6/QtCore/QIODevice \
+	/usr/include/qt6/QtCore/QJsonObject \
 	/usr/include/qt6/QtCore/QList \
 	/usr/include/qt6/QtCore/QMap \
 	/usr/include/qt6/QtCore/QMargins \
@@ -308,13 +314,16 @@ ui_test_autogen/timestamp: \
 	/usr/include/qt6/QtCore/QProcess \
 	/usr/include/qt6/QtCore/QRect \
 	/usr/include/qt6/QtCore/QRectF \
+	/usr/include/qt6/QtCore/QSettings \
 	/usr/include/qt6/QtCore/QSharedDataPointer \
 	/usr/include/qt6/QtCore/QSize \
 	/usr/include/qt6/QtCore/QSizeF \
 	/usr/include/qt6/QtCore/QString \
 	/usr/include/qt6/QtCore/QStringList \
+	/usr/include/qt6/QtCore/QTemporaryDir \
 	/usr/include/qt6/QtCore/QTemporaryFile \
 	/usr/include/qt6/QtCore/QTimer \
+	/usr/include/qt6/QtCore/QTranslator \
 	/usr/include/qt6/QtCore/QUrl \
 	/usr/include/qt6/QtCore/QVariant \
 	/usr/include/qt6/QtCore/QVariantList \

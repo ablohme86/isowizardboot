@@ -7,10 +7,250 @@
                     "entries": [
                         {
                             "codegenResult": 2,
+                            "column": 12,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 14,
+                            "message": "Could not find property \"color\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "lightTheme",
+                            "line": 18,
+                            "message": "Cannot access value for name settings"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "page",
+                            "line": 19,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "sidebarColor",
+                            "line": 20,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "card",
+                            "line": 21,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "field",
+                            "line": 22,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "ink",
+                            "line": 23,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "muted",
+                            "line": 24,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "accent",
+                            "line": 25,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "line",
+                            "line": 26,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "quiet",
+                            "line": 27,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "secondary",
+                            "line": 28,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "hover",
+                            "line": 29,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 41,
+                            "durationMicroseconds": 0,
+                            "functionName": "buttonBase",
+                            "line": 30,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "border",
+                            "line": 31,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "activeBackground",
+                            "line": 32,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "success",
+                            "line": 33,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 48,
+                            "durationMicroseconds": 0,
+                            "functionName": "successBackground",
+                            "line": 34,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "successMuted",
+                            "line": 35,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "error",
+                            "line": 36,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "warning",
+                            "line": 37,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "badge",
+                            "line": 38,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "badgeBorder",
+                            "line": 39,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 41,
+                            "durationMicroseconds": 0,
+                            "functionName": "popupColor",
+                            "line": 40,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "progressTrack",
+                            "line": 41,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "disabledText",
+                            "line": 42,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "buttonInk",
+                            "line": 43,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "buttonPressed",
+                            "line": 44,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "buttonHover",
+                            "line": 45,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "overlayColor",
+                            "line": 46,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "tooSmall",
-                            "line": 27,
+                            "line": 53,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -18,7 +258,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "ready",
-                            "line": 28,
+                            "line": 54,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -26,7 +266,7 @@
                             "column": 5,
                             "durationMicroseconds": 0,
                             "functionName": "updateSelection",
-                            "line": 30,
+                            "line": 56,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -34,7 +274,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "onClosing",
-                            "line": 51,
+                            "line": 79,
                             "message": "Could not find signal \"closing\"."
                         },
                         {
@@ -42,7 +282,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "onClosing",
-                            "line": 51,
+                            "line": 79,
                             "message": "Could not find signal \"closing\"."
                         },
                         {
@@ -50,7 +290,7 @@
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "target",
-                            "line": 47,
+                            "line": 73,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -58,7 +298,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onDevicesChanged",
-                            "line": 48,
+                            "line": 74,
                             "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
@@ -66,7 +306,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "tint",
-                            "line": 60,
+                            "line": 88,
                             "message": "Cannot access value for name window"
                         },
                         {
@@ -74,7 +314,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "onTintChanged",
-                            "line": 63,
+                            "line": 91,
                             "message": ""
                         },
                         {
@@ -82,7 +322,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "onKindChanged",
-                            "line": 64,
+                            "line": 92,
                             "message": ""
                         },
                         {
@@ -90,7 +330,7 @@
                             "column": 18,
                             "durationMicroseconds": 2000,
                             "functionName": "onPaint",
-                            "line": 65,
+                            "line": 93,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -98,7 +338,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "weight",
-                            "line": 110,
+                            "line": 153,
                             "message": "Could not find property \"weight\"."
                         },
                         {
@@ -106,7 +346,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 112,
+                            "line": 155,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -114,7 +354,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 113,
+                            "line": 156,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -122,7 +362,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 114,
+                            "line": 157,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -130,7 +370,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 115,
+                            "line": 158,
                             "message": ""
                         },
                         {
@@ -138,7 +378,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 116,
+                            "line": 159,
                             "message": ""
                         },
                         {
@@ -146,7 +386,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 120,
+                            "line": 163,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -154,7 +394,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 121,
+                            "line": 164,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -162,7 +402,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 122,
+                            "line": 165,
                             "message": "Cannot access value for name control"
                         },
                         {
@@ -170,7 +410,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "x",
-                            "line": 133,
+                            "line": 180,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -178,7 +418,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "y",
-                            "line": 134,
+                            "line": 181,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -186,7 +426,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 136,
+                            "line": 183,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -194,23 +434,31 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 137,
+                            "line": 184,
                             "message": "Cannot access value for name toggle"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 125,
+                            "column": 23,
+                            "durationMicroseconds": 0,
+                            "functionName": "tint",
+                            "line": 191,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 138,
+                            "line": 192,
                             "message": "Cannot access value for name toggle"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 40,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 138,
+                            "line": 186,
                             "message": ""
                         },
                         {
@@ -218,7 +466,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 141,
+                            "line": 196,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -226,7 +474,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 142,
+                            "line": 197,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -234,7 +482,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 143,
+                            "line": 198,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -242,7 +490,7 @@
                             "column": 26,
                             "durationMicroseconds": 0,
                             "functionName": "leftPadding",
-                            "line": 144,
+                            "line": 199,
                             "message": "Cannot access value for name toggle"
                         },
                         {
@@ -250,7 +498,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 145,
+                            "line": 200,
                             "message": ""
                         },
                         {
@@ -258,7 +506,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 146,
+                            "line": 201,
                             "message": ""
                         },
                         {
@@ -266,7 +514,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "nameFilters",
-                            "line": 153,
+                            "line": 208,
                             "message": ""
                         },
                         {
@@ -274,7 +522,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "fileMode",
-                            "line": 154,
+                            "line": 209,
                             "message": ""
                         },
                         {
@@ -282,388 +530,84 @@
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 155,
-                            "message": "Cannot access value for name backend"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 25,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 161,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 161,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 63,
-                            "durationMicroseconds": 0,
-                            "functionName": "bottom",
-                            "line": 161,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 48,
-                            "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 163,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 67,
-                            "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 163,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 87,
-                            "durationMicroseconds": 0,
-                            "functionName": "bottom",
-                            "line": 163,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 29,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 165,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 62,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 170,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 48,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 171,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 117,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 174,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 77,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 174,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 111,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 175,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 72,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 175,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 112,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 178,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 49,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalCenter",
-                            "line": 181,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 78,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 181,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 54,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 183,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 82,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 183,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 121,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalCenter",
-                            "line": 183,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 113,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 186,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 24,
-                            "durationMicroseconds": 0,
-                            "functionName": "model",
-                            "line": 188,
-                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 52,
-                            "durationMicroseconds": 0,
-                            "functionName": "passed",
-                            "line": 194,
+                            "line": 210,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 67,
+                            "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 196,
-                            "message": "Cannot load property passed from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 64,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 197,
-                            "message": "Cannot load property passed from QQuickItem::parent with type QQuickItem."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 113,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 197,
-                            "message": "Cannot load property passed from QQuickItem::parent with type QQuickItem."
+                            "line": 221,
+                            "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 50,
+                            "column": 19,
                             "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 197,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 34,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 199,
-                            "message": "Cannot access value for name modelData"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 52,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 199,
-                            "message": "Cannot load property passed from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 23,
-                            "durationMicroseconds": 0,
-                            "functionName": "contentWidth",
+                            "functionName": "left",
                             "line": 217,
-                            "message": "Could not find property \"contentWidth\"."
+                            "message": ""
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 25,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 215,
-                            "message": "Could not find property \"left\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 215,
-                            "message": "Could not find property \"right\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 66,
+                            "codegenResult": 0,
+                            "column": 18,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 215,
-                            "message": "Could not find property \"top\"."
+                            "line": 218,
+                            "message": ""
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 86,
+                            "codegenResult": 0,
+                            "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "bottom",
-                            "line": 215,
-                            "message": "Could not find property \"bottom\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 38,
-                            "durationMicroseconds": 0,
-                            "functionName": "policy",
-                            "line": 218,
-                            "message": "Could not find property \"policy\"."
+                            "line": 219,
+                            "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 20,
                             "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 220,
-                            "message": "Cannot retrieve a non-object type by ID: scroll"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 71,
-                            "durationMicroseconds": 0,
                             "functionName": "color",
                             "line": 229,
                             "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 116,
+                            "column": 24,
                             "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 229,
+                            "functionName": "right",
+                            "line": 225,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 50,
+                            "column": 22,
                             "durationMicroseconds": 0,
-                            "functionName": "centerIn",
+                            "functionName": "top",
+                            "line": 226,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 25,
+                            "durationMicroseconds": 0,
+                            "functionName": "bottom",
+                            "line": 227,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
                             "line": 233,
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 125,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 233,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 99,
-                            "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 236,
-                            "message": ""
-                        },
-                        {
                             "codegenResult": 2,
-                            "column": 121,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 236,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 151,
-                            "durationMicroseconds": 0,
-                            "functionName": "pixelSize",
-                            "line": 236,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 190,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 236,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 136,
-                            "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 237,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 158,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 237,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 37,
-                            "durationMicroseconds": 0,
-                            "functionName": "implicitHeight",
-                            "line": 241,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 242,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
                             "line": 243,
@@ -671,10 +615,426 @@
                         },
                         {
                             "codegenResult": 2,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "tint",
+                            "line": 247,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "centerIn",
+                            "line": 245,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 258,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 255,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 267,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 264,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 274,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 277,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 286,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 41,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
+                            "line": 289,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 290,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 300,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 301,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 49,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
+                            "line": 302,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 309,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 312,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "model",
+                            "line": 317,
+                            "message": "Cannot generate efficient code for storing an array in a non-sequence type"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 52,
+                            "durationMicroseconds": 0,
+                            "functionName": "passed",
+                            "line": 323,
+                            "message": "Cannot access value for name backend"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 328,
+                            "message": "Cannot load property passed from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 331,
+                            "message": "Cannot load property passed from QQuickItem::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 332,
+                            "message": "Cannot load property passed from QQuickItem::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "centerIn",
+                            "line": 330,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 337,
+                            "message": "Cannot access value for name modelData"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 338,
+                            "message": "Cannot load property passed from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 351,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 356,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 365,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 369,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 376,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 0,
+                            "functionName": "contentWidth",
+                            "line": 391,
+                            "message": "Could not find property \"contentWidth\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 385,
+                            "message": "Could not find property \"left\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 386,
+                            "message": "Could not find property \"right\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 18,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 387,
+                            "message": "Could not find property \"top\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 21,
+                            "durationMicroseconds": 0,
+                            "functionName": "bottom",
+                            "line": 388,
+                            "message": "Could not find property \"bottom\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "policy",
+                            "line": 392,
+                            "message": "Could not find property \"policy\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 394,
+                            "message": "Cannot retrieve a non-object type by ID: scroll"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 408,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 411,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 422,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 39,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 423,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 427,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "centerIn",
+                            "line": 425,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 41,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 430,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 438,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 439,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "pixelSize",
+                            "line": 441,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 442,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 449,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 450,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "implicitHeight",
+                            "line": 457,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 458,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 460,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 247,
+                            "line": 464,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -682,7 +1042,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onDropped",
-                            "line": 248,
+                            "line": 465,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -690,7 +1050,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onDropped",
-                            "line": 248,
+                            "line": 465,
                             "message": ""
                         },
                         {
@@ -698,239 +1058,151 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 246,
+                            "line": 463,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 41,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 252,
+                            "line": 473,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 61,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 252,
+                            "line": 474,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 80,
+                            "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 252,
+                            "line": 475,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 483,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 45,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 486,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 491,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 45,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 494,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 502,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 516,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 55,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 256,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 100,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 256,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 61,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 257,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 103,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 257,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 60,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 265,
+                            "line": 518,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 70,
+                            "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 269,
+                            "line": 527,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 134,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 269,
+                            "line": 528,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 159,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 269,
+                            "line": 529,
                             "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 201,
+                            "column": 49,
                             "durationMicroseconds": 0,
                             "functionName": "weight",
-                            "line": 269,
+                            "line": 532,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 70,
+                            "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 270,
+                            "line": 537,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 185,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 270,
+                            "line": 538,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 210,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 270,
+                            "line": 539,
                             "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 73,
-                            "durationMicroseconds": 0,
-                            "functionName": "enabled",
-                            "line": 272,
-                            "message": "Could not find property \"enabled\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 99,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 272,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 37,
-                            "durationMicroseconds": 0,
-                            "functionName": "implicitHeight",
-                            "line": 279,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 65,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 280,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 41,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 283,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 61,
-                            "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 283,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 80,
-                            "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 283,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 55,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 287,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 100,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 287,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 62,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 288,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 288,
-                            "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 42,
                             "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 290,
-                            "message": "Cannot access value for name backend"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 85,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 290,
-                            "message": "Cannot retrieve a non-object type by ID: window"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 81,
-                            "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 292,
+                            "line": 545,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -938,7 +1210,119 @@
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 298,
+                            "line": 546,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "implicitHeight",
+                            "line": 555,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 556,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 558,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 562,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 563,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 564,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 572,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 45,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 575,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 580,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 45,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 583,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 39,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 590,
+                            "message": "Cannot access value for name backend"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 591,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "enabled",
+                            "line": 597,
+                            "message": "Could not find property \"enabled\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 612,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -946,31 +1330,31 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 295,
+                            "line": 600,
                             "message": "Could not find property \"visible\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 75,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 296,
+                            "line": 604,
                             "message": "Cannot load property hovered from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 133,
+                            "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 296,
+                            "line": 605,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 78,
+                            "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "tint",
-                            "line": 297,
+                            "line": 609,
                             "message": "Cannot access value for name window"
                         },
                         {
@@ -978,7 +1362,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 304,
+                            "line": 619,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -986,7 +1370,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "model",
-                            "line": 305,
+                            "line": 620,
                             "message": "Could not find property \"model\"."
                         },
                         {
@@ -994,7 +1378,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "onActivated",
-                            "line": 309,
+                            "line": 624,
                             "message": "Could not find signal \"activated\"."
                         },
                         {
@@ -1002,7 +1386,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "onActivated",
-                            "line": 309,
+                            "line": 624,
                             "message": "Could not find signal \"activated\"."
                         },
                         {
@@ -1010,7 +1394,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 312,
+                            "line": 631,
                             "message": "Cannot access value for name usbSelect"
                         },
                         {
@@ -1018,47 +1402,55 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 313,
+                            "line": 632,
                             "message": "Cannot access value for name usbSelect"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 60,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 314,
+                            "line": 634,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 97,
+                            "column": 52,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 314,
+                            "line": 635,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 50,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "x",
-                            "line": 316,
+                            "line": 638,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 94,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 316,
+                            "line": 641,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 96,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 317,
+                            "line": 646,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 647,
                             "message": "Cannot access value for name usbSelect"
                         },
                         {
@@ -1066,15 +1458,15 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "y",
-                            "line": 319,
+                            "line": 650,
                             "message": "Could not find property \"y\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 65,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 319,
+                            "line": 651,
                             "message": "Could not find property \"width\"."
                         },
                         {
@@ -1082,31 +1474,47 @@
                             "column": 49,
                             "durationMicroseconds": 0,
                             "functionName": "implicitHeight",
-                            "line": 320,
+                            "line": 653,
                             "message": "Could not find property \"implicitHeight\"."
                         },
                         {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 655,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 51,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 656,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
                             "codegenResult": 0,
-                            "column": 85,
+                            "column": 53,
                             "durationMicroseconds": 0,
                             "functionName": "implicitHeight",
-                            "line": 322,
+                            "line": 661,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 107,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "model",
-                            "line": 322,
+                            "line": 662,
                             "message": "Cannot access value for name usbSelect"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 179,
+                            "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "currentIndex",
-                            "line": 322,
+                            "line": 663,
                             "message": "Cannot access value for name usbSelect"
                         },
                         {
@@ -1114,7 +1522,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 327,
+                            "line": 670,
                             "message": "Could not find property \"width\"."
                         },
                         {
@@ -1122,55 +1530,55 @@
                             "column": 46,
                             "durationMicroseconds": 0,
                             "functionName": "highlighted",
-                            "line": 330,
+                            "line": 682,
                             "message": "Could not find property \"highlighted\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 59,
+                            "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 328,
+                            "line": 672,
                             "message": "Cannot access value for name modelData"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 83,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 328,
+                            "line": 673,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 122,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 328,
+                            "line": 675,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 159,
+                            "column": 56,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 328,
+                            "line": 676,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 75,
+                            "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 329,
+                            "line": 680,
                             "message": "Cannot load property highlighted from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
                         },
                         {
                             "codegenResult": 0,
-                            "column": 63,
+                            "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 334,
+                            "line": 687,
                             "message": ""
                         },
                         {
@@ -1178,7 +1586,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 335,
+                            "line": 689,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1186,119 +1594,143 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 336,
+                            "line": 690,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 110,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "tint",
+                            "line": 701,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 349,
+                            "line": 711,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 125,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 350,
+                            "line": 716,
                             "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 169,
+                            "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 350,
+                            "line": 718,
                             "message": ""
                         },
                         {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 723,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
                             "codegenResult": 0,
-                            "column": 113,
+                            "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "weight",
-                            "line": 352,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 69,
-                            "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 357,
+                            "line": 727,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 93,
+                            "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 360,
+                            "line": 735,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 737,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 745,
                             "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 72,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 363,
+                            "line": 755,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 67,
+                            "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "running",
-                            "line": 364,
+                            "line": 757,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 88,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "loops",
-                            "line": 364,
+                            "line": 758,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 34,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 366,
+                            "line": 770,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 57,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 366,
+                            "line": 771,
                             "message": "Cannot retrieve a non-object type by ID: window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 99,
+                            "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "weight",
-                            "line": 366,
+                            "line": 774,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 34,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 367,
+                            "line": 779,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 83,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 367,
+                            "line": 780,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1306,7 +1738,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "value",
-                            "line": 372,
+                            "line": 791,
                             "message": "Could not find property \"value\"."
                         },
                         {
@@ -1314,31 +1746,39 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "indeterminate",
-                            "line": 373,
+                            "line": 792,
                             "message": "Could not find property \"indeterminate\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 44,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 795,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 377,
+                            "line": 801,
                             "message": "Cannot access value for name progressBar"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 116,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 377,
+                            "line": 804,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 183,
+                            "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 377,
+                            "line": 805,
                             "message": "Cannot access value for name progressBar"
                         },
                         {
@@ -1346,87 +1786,87 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 379,
+                            "line": 813,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 86,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 379,
+                            "line": 816,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 110,
+                            "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 379,
+                            "line": 817,
                             "message": "Cannot access value for name progressBar"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 65,
+                            "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "running",
-                            "line": 380,
+                            "line": 819,
                             "message": "Cannot access value for name progressBar"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 99,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "loops",
-                            "line": 380,
+                            "line": 820,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 150,
+                            "column": 41,
                             "durationMicroseconds": 0,
                             "functionName": "to",
-                            "line": 380,
+                            "line": 823,
                             "message": "Cannot access value for name progressBar"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 205,
+                            "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "type",
-                            "line": 380,
+                            "line": 825,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 278,
+                            "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "type",
-                            "line": 380,
+                            "line": 830,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 80,
+                            "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 384,
+                            "line": 839,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 103,
+                            "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 384,
+                            "line": 840,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 187,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 384,
+                            "line": 842,
                             "message": ""
                         },
                         {
@@ -1434,47 +1874,47 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 391,
+                            "line": 860,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 51,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 389,
+                            "line": 851,
                             "message": "Cannot load property text from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 71,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 389,
+                            "line": 852,
                             "message": "Cannot load property hovered from (component in /home/alexander/projects/isowizard/src/qml/Main.qml)::parent with type QQuickItem."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 85,
+                            "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 390,
+                            "line": 857,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 61,
+                            "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 394,
+                            "line": 867,
                             "message": "Could not find property \"visible\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 86,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 394,
+                            "line": 868,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -1482,7 +1922,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 398,
+                            "line": 875,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -1490,23 +1930,31 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 399,
+                            "line": 876,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 889,
+                            "message": "Cannot retrieve a non-object type by ID: window"
+                        },
+                        {
                             "codegenResult": 0,
-                            "column": 203,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 408,
+                            "line": 891,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 239,
+                            "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 408,
+                            "line": 892,
                             "message": ""
                         },
                         {
@@ -1514,7 +1962,7 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 416,
+                            "line": 903,
                             "message": "Could not find property \"width\"."
                         },
                         {
@@ -1522,7 +1970,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "closePolicy",
-                            "line": 419,
+                            "line": 906,
                             "message": "Could not find property \"closePolicy\"."
                         },
                         {
@@ -1530,183 +1978,391 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 415,
+                            "line": 902,
                             "message": "Could not find property \"centerIn\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 908,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 910,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 913,
+                            "message": "Could not find property \"text\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 914,
+                            "message": "Could not find property \"color\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 23,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 921,
+                            "message": "Could not find property \"wrapMode\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 25,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 917,
+                            "message": "Could not find property \"weight\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 20,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 924,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 936,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 942,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 949,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 952,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 958,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 959,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "primary",
+                            "line": 970,
+                            "message": "Cannot access value for name settings"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 971,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "primary",
+                            "line": 977,
+                            "message": "Cannot access value for name settings"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 978,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 987,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "weight",
+                            "line": 990,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 995,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "primary",
+                            "line": 1006,
+                            "message": "Cannot access value for name settings"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1007,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "primary",
+                            "line": 1013,
+                            "message": "Cannot access value for name settings"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1014,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1021,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 1022,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 1028,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "alignment",
+                            "line": 1027,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1042,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "wrapMode",
+                            "line": 1043,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 33,
+                            "durationMicroseconds": 0,
+                            "functionName": "implicitHeight",
+                            "line": 1047,
+                            "message": "Cannot access value for name confirmationDetails"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 24,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1048,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 31,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 1053,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 1054,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 1055,
+                            "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 421,
-                            "message": "Could not find property \"text\"."
+                            "line": 1061,
+                            "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 52,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 421,
-                            "message": "Could not find property \"color\"."
+                            "line": 1062,
+                            "message": "Cannot access value for name window"
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 151,
+                            "codegenResult": 0,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 421,
-                            "message": "Could not find property \"wrapMode\"."
+                            "line": 1064,
+                            "message": ""
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 94,
+                            "codegenResult": 0,
+                            "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "weight",
-                            "line": 421,
-                            "message": "Could not find property \"weight\"."
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 181,
-                            "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 431,
+                            "line": 1063,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 57,
-                            "durationMicroseconds": 0,
-                            "functionName": "implicitHeight",
-                            "line": 433,
-                            "message": "Cannot access value for name confirmationDetails"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 37,
-                            "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 436,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 57,
-                            "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 436,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 76,
-                            "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 436,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 58,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 437,
+                            "line": 1068,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 146,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 437,
+                            "line": 1069,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 192,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 437,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 171,
-                            "durationMicroseconds": 0,
-                            "functionName": "weight",
-                            "line": 437,
+                            "line": 1070,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 58,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 438,
-                            "message": "Cannot access value for name window"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 186,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 438,
-                            "message": "Cannot access value for name window"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 211,
-                            "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 438,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 58,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 439,
+                            "line": 1074,
                             "message": "Cannot access value for name backend"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 99,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 439,
+                            "line": 1075,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 120,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 439,
+                            "line": 1076,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 111,
+                            "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 443,
+                            "line": 1089,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 155,
+                            "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 443,
+                            "line": 1091,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 60,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 447,
+                            "line": 1100,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -1714,7 +2370,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 451,
+                            "line": 1106,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -1722,39 +2378,39 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 452,
+                            "line": 1107,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 191,
+                            "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 463,
+                            "line": 1124,
                             "message": "Cannot access value for name window"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 215,
+                            "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 463,
+                            "line": 1125,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 61,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 467,
+                            "line": 1134,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 86,
+                            "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 468,
+                            "line": 1139,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -1762,39 +2418,55 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 476,
+                            "line": 1151,
                             "message": "Could not find property \"width\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 34,
+                            "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 481,
+                            "line": 1158,
                             "message": "Could not find property \"text\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 123,
+                            "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 481,
+                            "line": 1161,
                             "message": "Could not find property \"wrapMode\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 86,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1162,
+                            "message": "Could not find property \"color\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 1168,
+                            "message": "Cannot access value for name window"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 483,
+                            "line": 1176,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 0,
-                            "column": 60,
+                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "alignment",
-                            "line": 483,
+                            "line": 1175,
                             "message": ""
                         }
                     ],

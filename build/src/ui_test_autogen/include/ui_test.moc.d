@@ -1,6 +1,7 @@
 /home/alexander/projects/isowizard/build/src/ui_test_autogen/include/ui_test.moc: /home/alexander/projects/isowizard/src/tests/ui_test.cpp \
   /home/alexander/projects/isowizard/build/src/ui_test_autogen/moc_predefs.h \
   /home/alexander/projects/isowizard/src/backend.h \
+  /home/alexander/projects/isowizard/src/settings.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -292,6 +293,7 @@
   /usr/include/qt6/QtCore/QFlags \
   /usr/include/qt6/QtCore/QHash \
   /usr/include/qt6/QtCore/QIODevice \
+  /usr/include/qt6/QtCore/QJsonObject \
   /usr/include/qt6/QtCore/QList \
   /usr/include/qt6/QtCore/QMap \
   /usr/include/qt6/QtCore/QMargins \
@@ -301,13 +303,16 @@
   /usr/include/qt6/QtCore/QProcess \
   /usr/include/qt6/QtCore/QRect \
   /usr/include/qt6/QtCore/QRectF \
+  /usr/include/qt6/QtCore/QSettings \
   /usr/include/qt6/QtCore/QSharedDataPointer \
   /usr/include/qt6/QtCore/QSize \
   /usr/include/qt6/QtCore/QSizeF \
   /usr/include/qt6/QtCore/QString \
   /usr/include/qt6/QtCore/QStringList \
+  /usr/include/qt6/QtCore/QTemporaryDir \
   /usr/include/qt6/QtCore/QTemporaryFile \
   /usr/include/qt6/QtCore/QTimer \
+  /usr/include/qt6/QtCore/QTranslator \
   /usr/include/qt6/QtCore/QUrl \
   /usr/include/qt6/QtCore/QVariant \
   /usr/include/qt6/QtCore/QVariantList \

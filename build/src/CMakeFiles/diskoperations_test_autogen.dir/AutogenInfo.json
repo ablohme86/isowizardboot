@@ -99,6 +99,7 @@
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
+		"QT_NO_DEBUG",
 		"QT_TESTCASE_BUILDDIR=\"/home/alexander/projects/isowizard/build/src\"",
 		"QT_TESTCASE_SOURCEDIR=\"/home/alexander/projects/isowizard/src\"",
 		"QT_TESTLIB_LIB"

@@ -29,11 +29,17 @@ Backend::Backend(QObject *parent) : QObject(parent)
         readEvents();
         m_busy = false;
         if (!m_terminalEvent) {
-            fail(code == 126 ? "Administrator approval was cancelled. Nothing was written."
+            if (m_cancelling && m_stage == "authorizing") {
+                m_stage = "cancelled";
+                m_status = "Operation cancelled";
+                m_detail = "Administrator approval was cancelled. Nothing was written.";
+                appendLog(m_detail);
+            } else fail(code == 126 ? "Administrator approval was cancelled. Nothing was written."
                  : code == 127 ? "Could not obtain administrator approval. Check that a polkit agent is running."
                  : exitStatus == QProcess::CrashExit ? "The writer stopped unexpectedly. The USB device may be incomplete."
                  : "Writing did not finish. See the activity log for details.");
         }
+        m_cancelling = false;
         emit stateChanged();
         refreshDevices();
     });
@@ -45,6 +51,8 @@ QString Backend::status() const { return translatedMessage(m_status); }
 QString Backend::scanError() const { return translatedMessage(m_scanError); }
 QString Backend::detail() const
 {
+    if (m_cancelling && m_busy && !m_terminalEvent)
+        return translatedMessage("Waiting for the current disk operation to finish. Keep the USB device connected.");
     if (m_stage != "writing" && m_stage != "verifying") return translatedMessage(m_detail);
     QString result = tr("%1 of %2").arg(Disks::formatBytes(m_done), Disks::formatBytes(m_total));
     if (m_remaining >= 0) {
@@ -131,6 +139,7 @@ void Backend::start(const QString &devicePath, const QString &expectedIdentity, 
         fail("Unmount the USB partitions in your file manager before starting. Keep the device connected."); return;
     }
     m_verify = verify;
+    m_cancelling = false;
     m_terminalEvent = false;
     m_pending.clear();
     m_busy = true;
@@ -148,6 +157,7 @@ void Backend::start(const QString &devicePath, const QString &expectedIdentity, 
 void Backend::cancel()
 {
     if (!m_busy) return;
+    m_cancelling = true;
     m_writer.write("cancel\n");
     if (m_stage == "authorizing") m_writer.terminate();
     m_status = "Cancelling …";
@@ -192,6 +202,7 @@ void Backend::readEvents()
             appendLog(m_status);
             if (stage != "writing" && stage != "verifying") appendLog(m_detail);
         }
+        if (m_cancelling && !m_terminalEvent) m_status = "Cancelling …";
         emit stateChanged();
     }
 }
