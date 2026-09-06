@@ -1,6 +1,8 @@
 --resource
 /home/alexander/projects/isowizard/build/src/.qt/rcc/translations.qrc
 --resource
+/home/alexander/projects/isowizard/build/src/.qt/rcc/app_icons.qrc
+--resource
 /home/alexander/projects/isowizard/build/src/.qt/rcc/qmake_isowizard.qrc
 --resource
 /home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0.qrc

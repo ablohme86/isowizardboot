@@ -37,6 +37,12 @@
 },
 {
   "directory": "/home/alexander/projects/isowizard/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -O3 -DNDEBUG -std=gnu++17 -o src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_app_icons.cpp.o -c /home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_app_icons.cpp",
+  "file": "/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_app_icons.cpp",
+  "output": "/home/alexander/projects/isowizard/build/src/CMakeFiles/isowizard.dir/.qt/rcc/qrc_app_icons.cpp.o"
+},
+{
+  "directory": "/home/alexander/projects/isowizard/build",
   "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QML_LIB -DQT_QUICKCONTROLS2_LIB -DQT_QUICK_LIB -I/home/alexander/projects/isowizard/build/src/isowizard_autogen/include -I/home/alexander/projects/isowizard/src -isystem /usr/include/qt6/QtQml -isystem /usr/include/qt6 -isystem /usr/include/qt6/QtCore -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtQmlIntegration -isystem /usr/include/qt6/QtNetwork -isystem /usr/include/qt6/QtQuick -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtOpenGL -isystem /usr/include/qt6/QtQuickControls2 -O3 -DNDEBUG -std=gnu++17 -o src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o -c /home/alexander/projects/isowizard/build/src/isowizard_qmltyperegistrations.cpp",
   "file": "/home/alexander/projects/isowizard/build/src/isowizard_qmltyperegistrations.cpp",
   "output": "/home/alexander/projects/isowizard/build/src/CMakeFiles/isowizard.dir/isowizard_qmltyperegistrations.cpp.o"

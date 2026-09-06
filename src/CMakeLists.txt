@@ -7,6 +7,17 @@ qt_add_executable(isowizard
 set_target_properties(isowizard PROPERTIES OUTPUT_NAME IsoWizardBoot)
 qt_add_resources(isowizard "translations" PREFIX "/i18n" BASE "i18n" FILES i18n/no-NB.i18n)
 
+set(app_icons)
+foreach(size IN ITEMS 16 24 32 48 64 128 256 512)
+    set(icon "${PROJECT_SOURCE_DIR}/assets/icons/isowizardboot-${size}.png")
+    list(APPEND app_icons "${icon}")
+    install(FILES "${icon}"
+        DESTINATION "${CMAKE_INSTALL_DATADIR}/icons/hicolor/${size}x${size}/apps"
+        RENAME isowizardboot.png)
+endforeach()
+qt_add_resources(isowizard "app_icons" PREFIX "/icons"
+    BASE "${PROJECT_SOURCE_DIR}/assets/icons" FILES ${app_icons})
+
 qt_add_qml_module(isowizard
     URI isowizard
     VERSION 1.0
@@ -18,7 +29,7 @@ qt_add_qml_module(isowizard
 target_link_libraries(isowizard PRIVATE Qt6::Quick Qt6::QuickControls2)
 
 # Install the executable
-install(TARGETS isowizard DESTINATION bin)
+install(TARGETS isowizard DESTINATION "${CMAKE_INSTALL_BINDIR}")
 
 if(BUILD_TESTING)
     find_package(Qt6 REQUIRED COMPONENTS Test)

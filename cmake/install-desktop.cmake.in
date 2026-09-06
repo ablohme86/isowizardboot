@@ -1,0 +1,37 @@
+# Resolve paths at install time so cmake --install --prefix and DESTDIR work.
+get_filename_component(app_bindir "@CMAKE_INSTALL_BINDIR@" ABSOLUTE
+    BASE_DIR "${CMAKE_INSTALL_PREFIX}")
+get_filename_component(app_datadir "@CMAKE_INSTALL_DATADIR@" ABSOLUTE
+    BASE_DIR "${CMAKE_INSTALL_PREFIX}")
+set(DESKTOP_EXECUTABLE "${app_bindir}/IsoWizardBoot")
+# Escape the quoted Exec argument, then the desktop-entry string itself.
+string(REPLACE "\\" "\\\\" DESKTOP_EXECUTABLE "${DESKTOP_EXECUTABLE}")
+foreach(character IN ITEMS "\"" "`" "$")
+    string(REPLACE "${character}" "\\${character}" DESKTOP_EXECUTABLE "${DESKTOP_EXECUTABLE}")
+endforeach()
+string(REPLACE "\\" "\\\\" DESKTOP_EXECUTABLE "${DESKTOP_EXECUTABLE}")
+string(REPLACE "%" "%%" DESKTOP_EXECUTABLE "${DESKTOP_EXECUTABLE}")
+configure_file("@PROJECT_SOURCE_DIR@/packaging/isowizardboot.desktop.in"
+    "@PROJECT_BINARY_DIR@/isowizardboot.desktop" @ONLY)
+file(INSTALL "@PROJECT_BINARY_DIR@/isowizardboot.desktop"
+    DESTINATION "${app_datadir}/applications")
+
+# Package staging must not refresh the host's desktop caches.
+if("$ENV{DESTDIR}" STREQUAL "")
+    find_program(UPDATE_DESKTOP_DATABASE update-desktop-database)
+    if(UPDATE_DESKTOP_DATABASE)
+        execute_process(COMMAND "${UPDATE_DESKTOP_DATABASE}" "${app_datadir}/applications"
+            RESULT_VARIABLE desktop_result)
+        if(NOT desktop_result EQUAL 0)
+            message(WARNING "Desktop database refresh failed: ${desktop_result}")
+        endif()
+    endif()
+    find_program(GTK_UPDATE_ICON_CACHE gtk-update-icon-cache)
+    if(GTK_UPDATE_ICON_CACHE)
+        execute_process(COMMAND "${GTK_UPDATE_ICON_CACHE}" --force --ignore-theme-index
+            "${app_datadir}/icons/hicolor" RESULT_VARIABLE icon_result)
+        if(NOT icon_result EQUAL 0)
+            message(WARNING "Icon cache refresh failed: ${icon_result}")
+        endif()
+    endif()
+endif()

@@ -1,3 +1,3 @@
 [<SLASH>home<SLASH>alexander<SLASH>projects<SLASH>isowizard<SLASH>src]
 importPaths="/home/alexander/projects/isowizard/build/src:/home/alexander/projects/isowizard/build/src/isowizard:/home/alexander/projects/isowizard/build:/usr/lib64/qt6/qml"
-resourceFiles="/home/alexander/projects/isowizard/build/src/.qt/rcc/translations.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/qmake_isowizard.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc"
+resourceFiles="/home/alexander/projects/isowizard/build/src/.qt/rcc/translations.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/app_icons.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/qmake_isowizard.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0.qrc:/home/alexander/projects/isowizard/build/src/.qt/rcc/isowizard_raw_qml_0_extra_qmldirs.qrc"

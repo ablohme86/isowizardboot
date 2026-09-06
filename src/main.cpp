@@ -5,6 +5,7 @@
 #include <QCommandLineParser>
 #include <QQuickWindow>
 #include <QImage>
+#include <QIcon>
 #include <QTimer>
 #include "backend.h"
 #include "diskoperations.h"
@@ -21,6 +22,11 @@ int main(int argc, char *argv[])
     app.setApplicationName("IsoWizardBoot");
     app.setOrganizationName("IsoWizardBoot");
     app.setApplicationVersion("1.0.0");
+    app.setDesktopFileName("isowizardboot");
+    QIcon appIcon;
+    for (int size : {16, 24, 32, 48, 64, 128, 256, 512})
+        appIcon.addFile(QStringLiteral(":/icons/isowizardboot-%1.png").arg(size));
+    app.setWindowIcon(appIcon);
     QCommandLineParser parser;
     parser.setApplicationDescription("Write USB-compatible ISO/IMG files to USB devices.");
     parser.addHelpOption();

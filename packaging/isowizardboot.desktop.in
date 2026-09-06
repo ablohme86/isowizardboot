@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=IsoWizardBoot
+GenericName=USB Image Writer
+GenericName[nb]=USB-avbildningsskriver
+Comment=Write ISO and IMG boot images to USB drives
+Comment[nb]=Skriv ISO- og IMG-oppstartsavbildninger til USB-minner
+Exec="@DESKTOP_EXECUTABLE@"
+Icon=isowizardboot
+Terminal=false
+Categories=System;
+Keywords=ISO;IMG;USB;boot;flash;image;
+Keywords[nb]=ISO;IMG;USB;oppstart;avbildning;
+StartupNotify=true
+StartupWMClass=IsoWizardBoot

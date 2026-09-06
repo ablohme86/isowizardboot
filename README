@@ -42,6 +42,34 @@ Build and run
 To omit tests, configure with -DBUILD_TESTING=OFF.
 To preselect an image: ./build/src/IsoWizardBoot --image /path/to/image.iso
 
+Install in KDE, GNOME and other Linux desktops
+---------------------------------------------
+From the project directory, build and install for your current user:
+    make install
+
+This installs to ~/.local by default: bin/IsoWizardBoot, the application-menu
+entry under share/applications, and icons under share/icons/hicolor. Search
+for IsoWizardBoot in your application launcher; it can also be pinned to a
+panel or dock. No sudo is needed for this user-local installation. The launcher
+uses the installed executable's absolute path, so ~/.local/bin need not be in
+PATH. The app still needs the Qt runtime and other dependencies listed above.
+
+For a system-wide installation:
+    make PREFIX=/usr/local
+    sudo cmake --install build --prefix /usr/local
+
+CMake installation also works directly after building:
+    cmake --install build --prefix "$HOME/.local"
+
+Packaging can use DESTDIR for staging. Override BUILD_DIR, BUILD_TYPE or JOBS
+when invoking make if needed. Desktop and icon caches refresh automatically
+when their tools are available, except during DESTDIR package staging.
+
+The icon is embedded in the binary for window/task-switcher use, and is also
+installed for the application menu. A bare Linux executable may still display
+a generic file icon in the file manager; launch through the installed menu entry.
+The source artwork and generated size variants live in assets/icons.
+
 Usage
 -----
 1. Select an ISO or IMG file.

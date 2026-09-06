@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file alias="isowizardboot-16.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-16.png</file>
+    <file alias="isowizardboot-24.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-24.png</file>
+    <file alias="isowizardboot-32.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-32.png</file>
+    <file alias="isowizardboot-48.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-48.png</file>
+    <file alias="isowizardboot-64.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-64.png</file>
+    <file alias="isowizardboot-128.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-128.png</file>
+    <file alias="isowizardboot-256.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-256.png</file>
+    <file alias="isowizardboot-512.png">/home/alexander/projects/isowizard/assets/icons/isowizardboot-512.png</file>
+  </qresource>
+</RCC>
+

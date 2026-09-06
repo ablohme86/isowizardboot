@@ -9,6 +9,7 @@
 		"/home/alexander/projects/isowizard/src/CMakeLists.txt",
 		"/usr/lib64/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib64/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
+		"/usr/lib64/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib64/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in",
 		"/usr/lib64/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib64/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in",
@@ -176,6 +177,7 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_app_icons.cpp",
 		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp",
 		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp",
 		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_qmake_isowizard.cpp",
@@ -214,6 +216,7 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
+		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_app_icons.cpp",
 		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0.cpp",
 		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_isowizard_raw_qml_0_extra_qmldirs.cpp",
 		"/home/alexander/projects/isowizard/build/src/.qt/rcc/qrc_qmake_isowizard.cpp",

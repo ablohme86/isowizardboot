@@ -1,10 +1,10 @@
-Start testing: Sep 06 16:39 CEST
+Start testing: Sep 06 17:11 CEST
 ----------------------------------------------------------
 1/2 Testing: diskoperations
 1/2 Test: diskoperations
 Command: "/home/alexander/projects/isowizard/build/src/diskoperations_test"
 Directory: /home/alexander/projects/isowizard/build/src
-"diskoperations" start time: Sep 06 16:39 CEST
+"diskoperations" start time: Sep 06 17:11 CEST
 Output:
 ----------------------------------------------------------
 ********* Start testing of DiskOperationsTest *********
@@ -17,13 +17,13 @@ PASS   : DiskOperationsTest::cancelBeforeWrite()
 PASS   : DiskOperationsTest::rejectsTruncatedSource()
 PASS   : DiskOperationsTest::fileIdentityChanges()
 PASS   : DiskOperationsTest::cleanupTestCase()
-Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 33ms
+Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 32ms
 ********* Finished testing of DiskOperationsTest *********
 <end of output>
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"diskoperations" end time: Sep 06 16:39 CEST
+"diskoperations" end time: Sep 06 17:11 CEST
 "diskoperations" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/2 Test: ui
 Command: "/home/alexander/projects/isowizard/build/src/ui_test"
 Directory: /home/alexander/projects/isowizard/build/src
-"ui" start time: Sep 06 16:39 CEST
+"ui" start time: Sep 06 17:11 CEST
 Output:
 ----------------------------------------------------------
 ********* Start testing of UiTest *********
@@ -41,14 +41,14 @@ PASS   : UiTest::imageSelectionAndConfirmation()
 PASS   : UiTest::refusesMissingAndReplacedTargets()
 PASS   : UiTest::preferencesSwitchLiveAndPersist()
 PASS   : UiTest::cleanupTestCase()
-Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 453ms
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 433ms
 ********* Finished testing of UiTest *********
 <end of output>
-Test time =   0.48 sec
+Test time =   0.46 sec
 ----------------------------------------------------------
 Test Passed.
-"ui" end time: Sep 06 16:39 CEST
+"ui" end time: Sep 06 17:11 CEST
 "ui" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 06 16:39 CEST
+End testing: Sep 06 17:11 CEST

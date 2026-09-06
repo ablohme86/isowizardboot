@@ -14,5 +14,9 @@ if(Qt6_VERSION VERSION_GREATER_EQUAL 6.8)
 endif()
 
 include(CTest)
+include(GNUInstallDirs)
 
 add_subdirectory(src)
+
+configure_file(cmake/install-desktop.cmake.in install-desktop.cmake @ONLY)
+install(SCRIPT "${CMAKE_CURRENT_BINARY_DIR}/install-desktop.cmake")
