@@ -1,0 +1,70 @@
+IsoWizardBoot
+=============
+
+Native Linux-app i Qt 6 / QML for å skrive oppstartsbilder til USB.
+
+Funksjoner
+----------
+- Mørkt, norsk grensesnitt med filvelger og dra-og-slipp for ISO/IMG.
+- Automatisk USB-oppdagelse, enhetsmodell, disksti og kapasitet.
+- Eksplisitt valg av mål og bekreftelse før hele enheten overskrives.
+- Reell fremdrift, hastighet, estimert tid og aktivitetslogg.
+- Valgfri SHA-256-verifisering ved å lese tilbake innholdet fra USB.
+- Avbryt med kontrollert avslutning av skriveprosessen.
+
+Kompatibilitet
+--------------
+Programmet skriver ukomprimerte bildefiler direkte til hele USB-enheten,
+tilsvarende dd. Bruk USB-kompatible hybrid-ISO-er (f.eks. Linux-installasjon)
+eller rå IMG-filer. Partisjonstabell, filsystem og BIOS/UEFI-støtte følger
+bildefilen. Programmet konverterer ikke vilkårlige ISO-filer til oppstartsbilder,
+oppretter ikke persistens og støtter ikke vanlige Windows-installasjons-ISO-er.
+At en fil har .iso-endelse garanterer ikke at den kan starte fra USB.
+
+Forutsetninger
+--------------
+Linux med kernel 5.15 eller nyere (disksekvensidentifikasjon), CMake >= 3.16,
+C++17-kompilator, Qt >= 6.5 med Quick, QuickControls2, Quick Dialogs og Qt Test
+(for tester), util-linux (lsblk) og polkit (pkexec). En polkit-agent må kjøre
+i skrivebordsøkten. Appen kjører normalt uten root; bare skriveprosessen
+ber om administratorgodkjenning gjennom pkexec.
+
+Bygg og start
+-------------
+    cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+    cmake --build build -j
+    ctest --test-dir build --output-on-failure
+    ./build/src/IsoWizardBoot
+
+Uten tester: legg til -DBUILD_TESTING=OFF ved konfigurering.
+Forhåndsvelg bildefil: ./build/src/IsoWizardBoot --image /sti/til/bilde.iso
+
+Bruk
+----
+1. Velg en ISO- eller IMG-fil.
+2. Velg riktig USB-enhet. Eksterne USB-harddisker vises også.
+3. Hvis den er montert, avmonter alle partisjonene i filbehandleren uten å
+   koble fra selve USB-enheten. Bildefilen må ligge på en annen disk.
+4. Velg om innholdet skal verifiseres, og klikk «Skriv til USB».
+5. Bekreft enheten og slettingen, og godkjenn systemets administratordialog.
+6. Vent på fullført skriving/verifisering før du løser ut USB-enheten.
+
+Sikkerhetskontroller
+-------------------
+Interne disker, skrivebeskyttede disker og enheter med systempartisjoner,
+swap eller aktive device-mapper-brukere filtreres bort. Monterte mål avvises.
+Skriveprosessen kontrollerer målkapasitet, serienummer og kernelens disksekvens
+på nytt etter godkjenning og disksekvens etter eksklusiv åpning. Den kontrollerer
+også bildefilens identitet og åpner kilden med den opprinnelige brukerens tilgang.
+Målet må være en ekte blokkenhet, ikke en vanlig fil eller symbolsk lenke.
+
+Tester
+------
+Testene skriver bare til midlertidige filer. De sjekker diskfiltrering,
+bytekorrekt kopiering, verifiseringsfeil, avbrudd, avkortede kilder,
+filidentitet, UI-tilstander og bekreftelsesdialog. UI-testen leser enhetslisten,
+men starter aldri en reell skriveprosess. Ingen USB-skriving inngår i testene.
+
+Ta et skjermbilde uten å åpne et vindu på skrivebordet:
+    QT_QPA_PLATFORM=offscreen QT_QUICK_BACKEND=software \
+      ./build/src/IsoWizardBoot --screenshot /tmp/isowizardboot.png

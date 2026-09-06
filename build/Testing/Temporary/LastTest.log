@@ -1,0 +1,53 @@
+Start testing: Sep 06 16:31 CEST
+----------------------------------------------------------
+1/2 Testing: diskoperations
+1/2 Test: diskoperations
+Command: "/home/alexander/projects/isowizard/build/src/diskoperations_test"
+Directory: /home/alexander/projects/isowizard/build/src
+"diskoperations" start time: Sep 06 16:31 CEST
+Output:
+----------------------------------------------------------
+********* Start testing of DiskOperationsTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 44
+PASS   : DiskOperationsTest::initTestCase()
+PASS   : DiskOperationsTest::onlySafeDisks()
+PASS   : DiskOperationsTest::writeAndVerify()
+PASS   : DiskOperationsTest::detectsReadbackCorruption()
+PASS   : DiskOperationsTest::cancelBeforeWrite()
+PASS   : DiskOperationsTest::rejectsTruncatedSource()
+PASS   : DiskOperationsTest::fileIdentityChanges()
+PASS   : DiskOperationsTest::cleanupTestCase()
+Totals: 8 passed, 0 failed, 0 skipped, 0 blacklisted, 33ms
+********* Finished testing of DiskOperationsTest *********
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"diskoperations" end time: Sep 06 16:31 CEST
+"diskoperations" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: ui
+2/2 Test: ui
+Command: "/home/alexander/projects/isowizard/build/src/ui_test"
+Directory: /home/alexander/projects/isowizard/build/src
+"ui" start time: Sep 06 16:31 CEST
+Output:
+----------------------------------------------------------
+********* Start testing of UiTest *********
+Config: Using QtTest library 6.11.2, Qt 6.11.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 16.2.1 20260819 (Red Hat 16.2.1-2)), fedora 44
+PASS   : UiTest::initTestCase()
+PASS   : UiTest::imageSelectionAndConfirmation()
+PASS   : UiTest::refusesMissingAndReplacedTargets()
+PASS   : UiTest::cleanupTestCase()
+Totals: 4 passed, 0 failed, 0 skipped, 0 blacklisted, 211ms
+********* Finished testing of UiTest *********
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"ui" end time: Sep 06 16:31 CEST
+"ui" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 06 16:31 CEST

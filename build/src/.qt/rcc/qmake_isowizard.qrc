@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/isowizard">
+    <file alias="qmldir">/home/alexander/projects/isowizard/build/src/isowizard/qmldir</file>
+  </qresource>
+</RCC>
+

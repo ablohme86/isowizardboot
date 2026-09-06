@@ -1,0 +1,54 @@
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include <QQuickStyle>
+#include <QCommandLineParser>
+#include <QQuickWindow>
+#include <QImage>
+#include <QTimer>
+#include "backend.h"
+#include "diskoperations.h"
+#include "settings.h"
+
+int main(int argc, char *argv[])
+{
+    if (argc > 1 && QByteArray(argv[1]) == "--write-image") {
+        QCoreApplication app(argc, argv);
+        return Disks::runWriter(app.arguments());
+    }
+    QQuickStyle::setStyle("Basic");
+    QGuiApplication app(argc, argv);
+    app.setApplicationName("IsoWizardBoot");
+    app.setOrganizationName("IsoWizardBoot");
+    app.setApplicationVersion("1.0.0");
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Skriv USB-kompatible ISO/IMG-filer til USB-enheter.");
+    parser.addHelpOption();
+    parser.addVersionOption();
+    parser.addOption({{"i", "image"}, "Forhåndsvelg en ISO/IMG-fil.", "file"});
+    parser.addOption({"screenshot", "Lagre et skjermbilde og avslutt (for UI-testing).", "file"});
+    parser.process(app);
+
+    Settings settings;
+    Backend backend;
+    if (parser.isSet("image")) backend.selectImage(QUrl::fromLocalFile(parser.value("image")));
+    QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("backend", &backend);
+    engine.rootContext()->setContextProperty("settings", &settings);
+    QObject::connect(&settings, &Settings::languageChanged, &engine, &QQmlApplicationEngine::retranslate);
+    QObject::connect(&settings, &Settings::languageChanged, &backend, &Backend::retranslate);
+
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
+                     &app, []() { QCoreApplication::exit(-1); },
+                     Qt::QueuedConnection);
+
+    engine.loadFromModule("isowizard", "Main");
+    if (parser.isSet("screenshot")) {
+        QTimer::singleShot(1500, &app, [&]() {
+            auto *window = engine.rootObjects().isEmpty() ? nullptr : qobject_cast<QQuickWindow *>(engine.rootObjects().first());
+            app.exit(window && window->grabWindow().save(parser.value("screenshot")) ? 0 : 1);
+        });
+    }
+
+    return app.exec();
+}

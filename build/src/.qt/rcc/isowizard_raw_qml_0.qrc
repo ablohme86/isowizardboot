@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/isowizard/">
+    <file alias="qml/Main.qml">/home/alexander/projects/isowizard/src/qml/Main.qml</file>
+  </qresource>
+</RCC>
+
