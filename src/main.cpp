@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
     app.setOrganizationName("IsoWizardBoot");
     app.setApplicationVersion("1.0.0");
     QCommandLineParser parser;
-    parser.setApplicationDescription("Skriv USB-kompatible ISO/IMG-filer til USB-enheter.");
+    parser.setApplicationDescription("Write USB-compatible ISO/IMG files to USB devices.");
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addOption({{"i", "image"}, "Forhåndsvelg en ISO/IMG-fil.", "file"});
-    parser.addOption({"screenshot", "Lagre et skjermbilde og avslutt (for UI-testing).", "file"});
+    parser.addOption({{"i", "image"}, "Preselect an ISO/IMG file.", "file"});
+    parser.addOption({"screenshot", "Save a screenshot and exit (for UI testing).", "file"});
     parser.process(app);
 
     Settings settings;

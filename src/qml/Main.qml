@@ -149,8 +149,8 @@ ApplicationWindow {
 
     FileDialog {
         id: imageDialog
-        title: "Velg et diskbilde"
-        nameFilters: ["Diskbilder (*.iso *.img *.ISO *.IMG)"]
+        title: qsTr("Choose a disk image")
+        nameFilters: [qsTr("Disk images (*.iso *.img *.ISO *.IMG)")]
         fileMode: FileDialog.OpenFile
         onAccepted: backend.selectImage(selectedFile)
     }
@@ -175,17 +175,17 @@ ApplicationWindow {
                     Text { text: "BOOT"; font { pixelSize: 12; weight: Font.Medium; letterSpacing: 4 } color: window.accent }
                 }
             }
-            Text { Layout.topMargin: 48; text: "ARBEIDSOMRÅDE"; color: "#696e79"; font { pixelSize: 9; weight: Font.Bold; letterSpacing: 1.3 } }
+            Text { Layout.topMargin: 48; text: qsTr("WORKSPACE"); color: "#696e79"; font { pixelSize: 9; weight: Font.Bold; letterSpacing: 1.3 } }
             Rectangle {
                 Layout.topMargin: 14; Layout.fillWidth: true; height: 42; radius: 7; color: "#2c2724"
                 Row { anchors { verticalCenter: parent.verticalCenter; left: parent.left; leftMargin: 10 } spacing: 8
                     Symbol { kind: "usb"; scale: 0.8 }
-                    Text { text: "Skriv USB"; color: window.accent; font.weight: Font.DemiBold; anchors.verticalCenter: parent.verticalCenter }
+                    Text { text: qsTr("Write USB"); color: window.accent; font.weight: Font.DemiBold; anchors.verticalCenter: parent.verticalCenter }
                 }
             }
-            Text { Layout.topMargin: 32; text: "TRE ENKLE STEG"; color: "#696e79"; font { pixelSize: 9; weight: Font.Bold; letterSpacing: 1.3 } }
+            Text { Layout.topMargin: 32; text: qsTr("THREE SIMPLE STEPS"); color: "#696e79"; font { pixelSize: 9; weight: Font.Bold; letterSpacing: 1.3 } }
             Repeater {
-                model: ["Velg bildefil", "Velg USB-enhet", "Skriv og start"]
+                model: [qsTr("Choose an image"), qsTr("Choose a USB device"), qsTr("Write and boot")]
                 delegate: RowLayout {
                     required property int index
                     required property string modelData
@@ -204,7 +204,7 @@ ApplicationWindow {
             RowLayout {
                 Layout.topMargin: 20; spacing: 7
                 Rectangle { width: 6; height: 6; radius: 3; color: "#9cd5b6" }
-                Text { text: "Lokalt. Enkelt. Klart."; color: "#a2a6ae"; font.pixelSize: 10 }
+                Text { text: qsTr("Local. Simple. Ready."); color: "#a2a6ae"; font.pixelSize: 10 }
             }
             Text { Layout.topMargin: 8; text: "IsoWizardBoot 1.0  /  Linux"; color: "#626874"; font.pixelSize: 10 }
         }
@@ -226,15 +226,15 @@ ApplicationWindow {
                 spacing: 8
                 RowLayout {
                     Layout.fillWidth: true
-                    Text { text: "ET NYTT SYSTEM STARTER HER"; color: window.accent; font { pixelSize: 10; weight: Font.DemiBold; letterSpacing: 1.7 } }
+                    Text { text: qsTr("A FRESH START BEGINS HERE"); color: window.accent; font { pixelSize: 10; weight: Font.DemiBold; letterSpacing: 1.7 } }
                     Item { Layout.fillWidth: true }
                     Rectangle {
                         implicitWidth: 86; implicitHeight: 25; radius: 12; color: "#20252a"; border.color: "#343b40"
                         Text { anchors.centerIn: parent; text: "ISO → USB"; color: "#bec8cc"; font { pixelSize: 10; weight: Font.Medium } }
                     }
                 }
-                Text { Layout.fillWidth: true; text: "Gjør USB-enheten oppstartsklar."; wrapMode: Text.WordWrap; color: window.ink; font { pixelSize: window.width >= 990 ? 28 : 23; weight: Font.DemiBold; letterSpacing: -0.7 } }
-                Text { Layout.fillWidth: true; text: "Velg et diskbilde. Koble til en USB-enhet. Vi tar oss av skrivingen."; wrapMode: Text.WordWrap; color: window.muted; font.pixelSize: 12 }
+                Text { Layout.fillWidth: true; text: qsTr("Make your USB ready to boot."); wrapMode: Text.WordWrap; color: window.ink; font { pixelSize: window.width >= 990 ? 28 : 23; weight: Font.DemiBold; letterSpacing: -0.7 } }
+                Text { Layout.fillWidth: true; text: qsTr("Choose an image. Connect a USB device. We'll handle the writing."); wrapMode: Text.WordWrap; color: window.muted; font.pixelSize: 12 }
 
                 Rectangle {
                     Layout.topMargin: 19; Layout.fillWidth: true
@@ -254,7 +254,7 @@ ApplicationWindow {
                         RowLayout {
                             spacing: 9
                             Text { text: "01"; color: window.accent; font { pixelSize: 11; weight: Font.Bold } }
-                            Text { text: "Bildefil"; color: window.ink; font { pixelSize: 14; weight: Font.DemiBold } }
+                            Text { text: qsTr("Image file"); color: window.ink; font { pixelSize: 14; weight: Font.DemiBold } }
                             Item { Layout.fillWidth: true }
                             Text { text: ".ISO / .IMG"; color: "#777d88"; font { pixelSize: 9; letterSpacing: 1 } }
                         }
@@ -266,10 +266,10 @@ ApplicationWindow {
                             }
                             ColumnLayout {
                                 Layout.fillWidth: true; spacing: 4
-                                Text { Layout.fillWidth: true; text: backend.imageName || "Velg eller slipp en bildefil her"; elide: Text.ElideMiddle; color: window.ink; font { pixelSize: 13; weight: Font.Medium } }
-                                Text { Layout.fillWidth: true; text: backend.imageName ? backend.imageSizeText + "  ·  " + backend.imagePath : "Ukomprimerte ISO- og IMG-filer"; elide: Text.ElideMiddle; color: window.muted; font.pixelSize: 11 }
+                                Text { Layout.fillWidth: true; text: backend.imageName || qsTr("Choose or drop an image here"); elide: Text.ElideMiddle; color: window.ink; font { pixelSize: 13; weight: Font.Medium } }
+                                Text { Layout.fillWidth: true; text: backend.imageName ? backend.imageSizeText + "  ·  " + backend.imagePath : qsTr("Uncompressed ISO and IMG files"); elide: Text.ElideMiddle; color: window.muted; font.pixelSize: 11 }
                             }
-                            ActionButton { text: "Velg fil …"; enabled: !backend.busy; onClicked: imageDialog.open() }
+                            ActionButton { text: qsTr("Choose file …"); enabled: !backend.busy; onClicked: imageDialog.open() }
                         }
                     }
                 }
@@ -285,14 +285,14 @@ ApplicationWindow {
                         RowLayout {
                             spacing: 9
                             Text { text: "02"; color: window.accent; font { pixelSize: 11; weight: Font.Bold } }
-                            Text { text: "USB-enhet"; color: window.ink; font { pixelSize: 14; weight: Font.DemiBold } }
+                            Text { text: qsTr("USB device"); color: window.ink; font { pixelSize: 14; weight: Font.DemiBold } }
                             Item { Layout.fillWidth: true }
-                            Text { text: backend.devices.length + " funnet"; color: window.muted; font.pixelSize: 11 }
+                            Text { text: backend.devices.length + qsTr(" found"); color: window.muted; font.pixelSize: 11 }
                             Button {
                                 implicitWidth: 28; implicitHeight: 28; enabled: !backend.busy
                                 padding: 2
-                                Accessible.name: "Oppdater USB-enheter"
-                                ToolTip.visible: hovered; ToolTip.text: "Oppdater enhetslisten"
+                                Accessible.name: qsTr("Refresh USB devices")
+                                ToolTip.visible: hovered; ToolTip.text: qsTr("Refresh the device list")
                                 background: Rectangle { radius: 5; color: parent.hovered ? "#343840" : "transparent"; border.color: parent.activeFocus ? window.accent : "transparent" }
                                 contentItem: Symbol { kind: "refresh"; tint: window.muted; scale: 0.7 }
                                 onClicked: backend.refreshDevices()
@@ -305,11 +305,11 @@ ApplicationWindow {
                             model: backend.devices
                             textRole: "label"
                             currentIndex: -1
-                            Accessible.name: "Velg USB-enhet som skal overskrives"
+                            Accessible.name: qsTr("Choose the USB device to overwrite")
                             onActivated: function(index) { window.selectedPath = backend.devices[index].path; window.updateSelection() }
                             contentItem: Text {
                                 leftPadding: 14; rightPadding: 34
-                                text: usbSelect.currentIndex >= 0 ? usbSelect.displayText : backend.devices.length ? "Velg USB-enhet …" : "Koble til en USB-enhet …"
+                                text: usbSelect.currentIndex >= 0 ? usbSelect.displayText : backend.devices.length ? qsTr("Choose a USB device …") : qsTr("Connect a USB device …")
                                 color: usbSelect.currentIndex >= 0 ? window.ink : window.muted
                                 font.pixelSize: 12; elide: Text.ElideMiddle; verticalAlignment: Text.AlignVCenter
                             }
@@ -333,10 +333,10 @@ ApplicationWindow {
                         Text {
                             Layout.fillWidth: true; wrapMode: Text.WordWrap; font.pixelSize: 11
                             color: backend.scanError || window.tooSmall || (window.selectedDevice && window.selectedDevice.mounted) ? "#ffb683" : window.muted
-                            text: backend.scanError || (window.tooSmall ? "Denne USB-enheten er for liten for den valgte bildefilen."
-                                : window.selectedDevice && window.selectedDevice.mounted ? "Enheten er montert. Avmonter partisjonene i filbehandleren først."
-                                : window.selectedDevice ? window.selectedDevice.path + "  ·  " + window.selectedDevice.sizeText + (window.selectedDevice.removable ? "  ·  Flyttbar enhet" : "  ·  Ekstern disk — kontroller målet nøye")
-                                : "Enhetslisten oppdateres automatisk. Systemdisker er skjult.")
+                            text: backend.scanError || (window.tooSmall ? qsTr("This USB device is too small for the selected image.")
+                                : window.selectedDevice && window.selectedDevice.mounted ? qsTr("The device is mounted. Unmount its partitions in your file manager first.")
+                                : window.selectedDevice ? window.selectedDevice.path + "  ·  " + window.selectedDevice.sizeText + (window.selectedDevice.removable ? qsTr("  ·  Removable device") : qsTr("  ·  External disk — check the target carefully"))
+                                : qsTr("Devices refresh automatically. System disks are hidden."))
                         }
                     }
                 }
@@ -346,14 +346,14 @@ ApplicationWindow {
                     Symbol { kind: "shield"; tint: "#a1b3aa"; scale: 0.8 }
                     ColumnLayout {
                         Layout.fillWidth: true; spacing: 3
-                        Toggle { id: verifyToggle; text: "Verifiser etter skriving"; checked: true; enabled: !backend.busy }
-                        Text { Layout.fillWidth: true; text: "Leser USB-innholdet tilbake og sammenligner SHA-256."; color: window.muted; font.pixelSize: 10; wrapMode: Text.WordWrap }
+                        Toggle { id: verifyToggle; text: qsTr("Verify after writing"); checked: true; enabled: !backend.busy }
+                        Text { Layout.fillWidth: true; text: qsTr("Reads back the USB contents and compares SHA-256 hashes."); color: window.muted; font.pixelSize: 10; wrapMode: Text.WordWrap }
                     }
-                    Text { text: "ANBEFALT"; color: "#a1b3aa"; font { pixelSize: 8; letterSpacing: 1.1; weight: Font.DemiBold } }
+                    Text { text: qsTr("RECOMMENDED"); color: "#a1b3aa"; font { pixelSize: 8; letterSpacing: 1.1; weight: Font.DemiBold } }
                 }
                 Text {
                     Layout.topMargin: 5; Layout.fillWidth: true
-                    text: "Direkte diskskriving · Partisjoner og oppstartsmodus følger bildefilen. Bruk USB-kompatible hybrid-ISO-er eller IMG-filer. Vanlige Windows-ISO-er støttes ikke."
+                    text: qsTr("Direct disk writing · Partitions and boot mode follow the image. Use USB-compatible hybrid ISOs or IMG files. Standard Windows ISOs are not supported.")
                     color: "#7e8490"; font.pixelSize: 10; wrapMode: Text.WordWrap; lineHeight: 1.25
                 }
 
@@ -385,16 +385,16 @@ ApplicationWindow {
                 RowLayout {
                     Layout.topMargin: 3; Layout.fillWidth: true
                     Button {
-                        text: "Vis aktivitetslogg ↗"; flat: true
+                        text: qsTr("View activity log ↗"); flat: true
                         contentItem: Text { text: parent.text; color: parent.hovered ? window.ink : window.muted; font.pixelSize: 11 }
                         background: Rectangle { color: "transparent"; border.color: parent.activeFocus ? window.accent : "transparent"; radius: 4 }
                         onClicked: logDialog.open()
                     }
                     Item { Layout.fillWidth: true }
-                    ActionButton { text: "Avbryt"; visible: backend.busy; onClicked: stopDialog.open() }
+                    ActionButton { text: qsTr("Cancel"); visible: backend.busy; onClicked: stopDialog.open() }
                     ActionButton {
                         objectName: "writeButton"
-                        text: "Skriv til USB  →"; primary: true; implicitHeight: 46
+                        text: qsTr("Write to USB  →"); primary: true; implicitHeight: 46
                         enabled: window.ready
                         onClicked: {
                             window.confirmationPath = window.selectedPath
@@ -405,7 +405,7 @@ ApplicationWindow {
                         }
                     }
                 }
-                Text { Layout.fillWidth: true; Layout.topMargin: 3; text: "Alt innhold på valgt USB-enhet slettes. Du bekrefter før skrivingen starter."; color: "#777d87"; font.pixelSize: 10; wrapMode: Text.WordWrap; horizontalAlignment: Text.AlignRight }
+                Text { Layout.fillWidth: true; Layout.topMargin: 3; text: qsTr("All data on the selected USB device will be erased. You'll confirm before writing."); color: "#777d87"; font.pixelSize: 10; wrapMode: Text.WordWrap; horizontalAlignment: Text.AlignRight }
             }
             Item { Layout.preferredHeight: 26 }
         }
@@ -425,10 +425,10 @@ ApplicationWindow {
     DarkDialog {
         id: confirmDialog
         objectName: "confirmDialog"
-        title: "Slette og skrive til denne enheten?"
+        title: qsTr("Erase and write to this device?")
         contentItem: ColumnLayout {
             spacing: 17
-            Text { Layout.fillWidth: true; text: "Alle partisjoner og filer på enheten blir overskrevet. Kontroller at du har valgt riktig USB-enhet."; color: "#d0b8a4"; wrapMode: Text.WordWrap }
+            Text { Layout.fillWidth: true; text: qsTr("Every partition and file on this device will be overwritten. Check that you've selected the correct USB device."); color: "#d0b8a4"; wrapMode: Text.WordWrap }
             Rectangle {
                 Layout.fillWidth: true; implicitHeight: confirmationDetails.implicitHeight + 28; color: "#15181d"; radius: 8
                 ColumnLayout {
@@ -436,18 +436,18 @@ ApplicationWindow {
                     anchors { left: parent.left; right: parent.right; top: parent.top; margins: 14 } spacing: 7
                     Text { Layout.fillWidth: true; text: window.confirmationIdentity ? JSON.parse(window.confirmationIdentity).name : ""; color: window.ink; font.weight: Font.Bold; wrapMode: Text.WordWrap }
                     Text { Layout.fillWidth: true; text: window.confirmationIdentity ? window.confirmationPath + "  ·  " + JSON.parse(window.confirmationIdentity).sizeText : ""; color: window.accent; wrapMode: Text.WordWrap }
-                    Text { Layout.fillWidth: true; text: "Bildefil: " + backend.imageName; color: window.muted; elide: Text.ElideMiddle }
+                    Text { Layout.fillWidth: true; text: qsTr("Image: ") + backend.imageName; color: window.muted; elide: Text.ElideMiddle }
                 }
             }
-            Toggle { id: eraseCheck; objectName: "eraseCheck"; Layout.fillWidth: true; text: "Jeg forstår at alt innhold på denne enheten slettes." }
-            Text { Layout.fillWidth: true; text: "Systemet ber deretter om administratorgodkjenning."; color: window.muted; font.pixelSize: 11; wrapMode: Text.WordWrap }
+            Toggle { id: eraseCheck; objectName: "eraseCheck"; Layout.fillWidth: true; text: qsTr("I understand that all data on this device will be erased.") }
+            Text { Layout.fillWidth: true; text: qsTr("The system will then ask for administrator approval."); color: window.muted; font.pixelSize: 11; wrapMode: Text.WordWrap }
             RowLayout {
                 Layout.fillWidth: true
                 Item { Layout.fillWidth: true }
-                ActionButton { text: "Tilbake"; onClicked: confirmDialog.close() }
+                ActionButton { text: qsTr("Go back"); onClicked: confirmDialog.close() }
                 ActionButton {
                     objectName: "confirmWriteButton"
-                    text: "Slett og skriv"; primary: true
+                    text: qsTr("Erase and write"); primary: true
                     enabled: eraseCheck.checked && window.confirmationIdentity === JSON.stringify(window.selectedDevice)
                     onClicked: { confirmDialog.close(); backend.start(window.confirmationPath, JSON.parse(window.confirmationIdentity).identity, window.confirmVerify) }
                 }
@@ -457,30 +457,30 @@ ApplicationWindow {
 
     DarkDialog {
         id: stopDialog
-        title: "Avbryte operasjonen?"
+        title: qsTr("Cancel the operation?")
         contentItem: ColumnLayout {
             spacing: 20
-            Text { Layout.fillWidth: true; text: "En avbrutt skriving kan etterlate USB-enheten ufullstendig. Vent til appen melder at operasjonen er avbrutt før du kobler den fra."; color: window.muted; wrapMode: Text.WordWrap }
+            Text { Layout.fillWidth: true; text: qsTr("Cancelling a write can leave the USB device incomplete. Wait for the app to report that the operation was cancelled before disconnecting it."); color: window.muted; wrapMode: Text.WordWrap }
             RowLayout {
                 Layout.fillWidth: true
                 Item { Layout.fillWidth: true }
-                ActionButton { text: "Fortsett"; onClicked: stopDialog.close() }
-                ActionButton { text: "Avbryt operasjonen"; primary: true; onClicked: { stopDialog.close(); backend.cancel() } }
+                ActionButton { text: qsTr("Keep going"); onClicked: stopDialog.close() }
+                ActionButton { text: qsTr("Cancel operation"); primary: true; onClicked: { stopDialog.close(); backend.cancel() } }
             }
         }
     }
 
     DarkDialog {
         id: logDialog
-        title: "Aktivitetslogg"
+        title: qsTr("Activity log")
         width: Math.min(window.width - 60, 720)
         contentItem: ColumnLayout {
             spacing: 16
             ScrollView {
                 Layout.fillWidth: true; Layout.preferredHeight: 300
-                TextArea { text: backend.log || "Ingen operasjoner ennå."; readOnly: true; selectByMouse: true; wrapMode: TextEdit.Wrap; color: "#c5cbd4"; font { family: "monospace"; pixelSize: 11 } background: Rectangle { color: "#14171c"; radius: 6 } }
+                TextArea { text: backend.log || qsTr("No operations yet."); readOnly: true; selectByMouse: true; wrapMode: TextEdit.Wrap; color: "#c5cbd4"; font { family: "monospace"; pixelSize: 11 } background: Rectangle { color: "#14171c"; radius: 6 } }
             }
-            ActionButton { text: "Lukk"; Layout.alignment: Qt.AlignRight; onClicked: logDialog.close() }
+            ActionButton { text: qsTr("Close"); Layout.alignment: Qt.AlignRight; onClicked: logDialog.close() }
         }
     }
 }

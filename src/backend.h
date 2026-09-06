@@ -57,7 +57,7 @@ private:
     qint64 m_imageSize = 0;
     bool m_busy = false, m_verify = true, m_terminalEvent = false;
     double m_progress = 0;
-    QString m_stage = "idle", m_status = "Klar når du er", m_detail = "Velg en bildefil og en USB-enhet for å komme i gang.";
+    QString m_stage = "idle", m_status = "Ready when you are", m_detail = "Choose an image and a USB device to get started.";
     QByteArray m_pending;
     qint64 m_stageStarted = 0;
     qint64 m_done = 0, m_total = 0;

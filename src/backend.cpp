@@ -22,17 +22,17 @@ Backend::Backend(QObject *parent) : QObject(parent)
     connect(&m_writer, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
         if (error == QProcess::FailedToStart) {
             m_busy = false;
-            fail("Kunne ikke starte pkexec. Installer polkit for å skrive USB-enheter.");
+            fail("Could not start pkexec. Install polkit to write USB devices.");
         }
     });
     connect(&m_writer, &QProcess::finished, this, [this](int code, QProcess::ExitStatus exitStatus) {
         readEvents();
         m_busy = false;
         if (!m_terminalEvent) {
-            fail(code == 126 ? "Administratorgodkjenning ble avbrutt. Ingenting ble skrevet."
-                 : code == 127 ? "Kunne ikke få administratorgodkjenning. Kontroller at en polkit-agent kjører."
-                 : exitStatus == QProcess::CrashExit ? "Skriveprosessen stoppet uventet. USB-enheten kan være ufullstendig."
-                 : "Skrivingen ble ikke fullført. Se aktivitetsloggen for detaljer.");
+            fail(code == 126 ? "Administrator approval was cancelled. Nothing was written."
+                 : code == 127 ? "Could not obtain administrator approval. Check that a polkit agent is running."
+                 : exitStatus == QProcess::CrashExit ? "The writer stopped unexpectedly. The USB device may be incomplete."
+                 : "Writing did not finish. See the activity log for details.");
         }
         emit stateChanged();
         refreshDevices();
@@ -83,7 +83,7 @@ void Backend::appendLog(const QString &text)
 void Backend::fail(const QString &text)
 {
     m_stage = "error";
-    m_status = "Kunne ikke fortsette";
+    m_status = "Unable to continue";
     m_detail = text;
     appendLog(text);
     emit stateChanged();
@@ -97,7 +97,7 @@ void Backend::selectImage(const QUrl &url)
     const auto suffix = QFileInfo(path).suffix().toLower();
     if (!url.isLocalFile() || (suffix != "iso" && suffix != "img") || !file.open(QIODevice::ReadOnly)
         || !QFileInfo(path).isFile() || file.size() <= 0) {
-        fail("Velg en lesbar, ukomprimert .iso- eller .img-fil som ikke er tom.");
+        fail("Choose a readable, uncompressed .iso or .img file that is not empty.");
         return;
     }
     m_imagePath = path;
@@ -105,9 +105,9 @@ void Backend::selectImage(const QUrl &url)
     m_identity = Disks::imageIdentity(path);
     m_progress = 0;
     m_stage = "idle";
-    m_status = "Bildefilen er klar";
-    m_detail = "Velg USB-enheten som skal brukes.";
-    appendLog("Valgt bildefil: " + path + " (" + imageSizeText() + ")");
+    m_status = "Image ready";
+    m_detail = "Choose the USB device you want to use.";
+    appendLog("Selected image: " + path + " (" + imageSizeText() + ")");
     emit imageChanged();
     emit stateChanged();
 }
@@ -119,16 +119,16 @@ void Backend::start(const QString &devicePath, const QString &expectedIdentity, 
     QVariantMap selected;
     for (const auto &value : m_devices)
         if (value.toMap()["path"].toString() == devicePath) selected = value.toMap();
-    if (selected.isEmpty()) { fail("USB-enheten er ikke lenger tilgjengelig. Velg enheten på nytt."); return; }
+    if (selected.isEmpty()) { fail("The USB device is no longer available. Select it again."); return; }
     if (selected["identity"].toString() != expectedIdentity || selected["sequence"].toString().isEmpty()) {
-        fail("USB-enheten er byttet ut eller kunne ikke identifiseres sikkert. Velg og bekreft målet på nytt."); return;
+        fail("The USB device was replaced or could not be safely identified. Select and confirm the target again."); return;
     }
     if (m_identity.isEmpty() || Disks::imageIdentity(m_imagePath) != m_identity) {
-        fail("Bildefilen er endret eller ikke tilgjengelig. Velg filen på nytt."); return;
+        fail("The image has changed or is unavailable. Select the file again."); return;
     }
-    if (m_imageSize > selected["size"].toLongLong()) { fail("Bildefilen er større enn USB-enheten."); return; }
+    if (m_imageSize > selected["size"].toLongLong()) { fail("The image is larger than the USB device."); return; }
     if (selected["mounted"].toBool()) {
-        fail("Avmonter USB-enhetens partisjoner i filbehandleren før du starter. Ikke koble fra selve enheten."); return;
+        fail("Unmount the USB partitions in your file manager before starting. Keep the device connected."); return;
     }
     m_verify = verify;
     m_terminalEvent = false;
@@ -136,9 +136,9 @@ void Backend::start(const QString &devicePath, const QString &expectedIdentity, 
     m_busy = true;
     m_progress = 0;
     m_stage = "authorizing";
-    m_status = "Venter på godkjenning";
-    m_detail = "Godkjenn administratortilgang i systemdialogen for å starte skrivingen.";
-    appendLog("Starter: " + imageName() + " → " + selected["label"].toString());
+    m_status = "Waiting for approval";
+    m_detail = "Approve administrator access in the system dialog to start writing.";
+    appendLog("Starting: " + imageName() + " → " + selected["label"].toString());
     emit stateChanged();
     m_writer.start("/usr/bin/pkexec", {QCoreApplication::applicationFilePath(), "--write-image", m_imagePath,
         devicePath, selected["size"].toString(), selected["serial"].toString(), m_identity,
@@ -150,9 +150,9 @@ void Backend::cancel()
     if (!m_busy) return;
     m_writer.write("cancel\n");
     if (m_stage == "authorizing") m_writer.terminate();
-    m_status = "Avbryter …";
-    m_detail = "Venter på at enheten skal fullføre pågående diskoperasjon. Ikke trekk ut USB-enheten ennå.";
-    appendLog("Avbrudd forespurt.");
+    m_status = "Cancelling …";
+    m_detail = "Waiting for the current disk operation to finish. Keep the USB device connected.";
+    appendLog("Cancellation requested.");
     emit stateChanged();
 }
 
@@ -174,17 +174,17 @@ void Backend::readEvents()
         const double fraction = total > 0 ? double(done) / double(total) : 0;
         if (stage == "writing" || stage == "verifying") {
             m_progress = stage == "writing" ? fraction * (m_verify ? 0.8 : 0.98) : 0.8 + fraction * 0.19;
-            m_status = stage == "writing" ? "Skriver til USB …" : "Verifiserer innhold …";
+            m_status = stage == "writing" ? "Writing to USB …" : "Verifying contents …";
             const double seconds = qMax(0.1, (QDateTime::currentMSecsSinceEpoch() - m_stageStarted) / 1000.0);
             const double speed = done / seconds;
             m_done = done; m_total = total; m_speed = speed;
             m_remaining = seconds > 1 && done > 0 ? int((total - done) / speed) : -1;
         } else if (stage == "syncing") {
-            m_status = "Fullfører skriving …";
-            m_detail = "Tømmer diskbufferen. Dette kan ta litt tid; la USB-enheten stå tilkoblet.";
+            m_status = "Finishing write …";
+            m_detail = "Flushing the disk cache. This can take a while; keep the USB device connected.";
         } else if (stage == "complete" || stage == "error" || stage == "cancelled") {
             m_terminalEvent = true;
-            m_status = stage == "complete" ? "USB-enheten er klar!" : stage == "cancelled" ? "Operasjonen ble avbrutt" : "Skrivingen feilet";
+            m_status = stage == "complete" ? "Your USB device is ready!" : stage == "cancelled" ? "Operation cancelled" : "Writing failed";
             m_detail = event["message"].toString();
             if (stage == "complete") m_progress = 1;
         }

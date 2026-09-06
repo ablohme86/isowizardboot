@@ -89,7 +89,7 @@ QVariantList parseDevices(const QByteArray &json, QString *error)
     QJsonParseError parseError;
     const auto document = QJsonDocument::fromJson(json, &parseError);
     if (parseError.error != QJsonParseError::NoError || !document.object()["blockdevices"].isArray()) {
-        *error = "Kunne ikke lese enhetslisten fra lsblk.";
+        *error = "Could not read the device list from lsblk.";
         return {};
     }
     QVariantList devices;
@@ -118,7 +118,7 @@ QVariantList scan(QString *error)
     QProcess process;
     process.start("/usr/bin/lsblk", {"--json", "--bytes", "--output", "NAME,PATH,TYPE,SIZE,MODEL,SERIAL,TRAN,RM,RO,MOUNTPOINTS"});
     if (!process.waitForFinished(5000) || process.exitCode() != 0) {
-        *error = "Kunne ikke hente USB-enheter. Kontroller at lsblk er installert.";
+        *error = "Could not discover USB devices. Check that lsblk is installed.";
         return {};
     }
     return parseDevices(process.readAllStandardOutput(), error);
@@ -135,7 +135,7 @@ bool transfer(int source, int target, qint64 size, bool verify,
               const std::function<void(const QString &, qint64, qint64)> &progress,
               const std::function<bool()> &cancelled, QString *error)
 {
-    if (size <= 0) { *error = "Bildefilen er tom."; return false; }
+    if (size <= 0) { *error = "The image is empty."; return false; }
     QByteArray buffer(4 * 1024 * 1024, Qt::Uninitialized);
     QCryptographicHash sourceHash(QCryptographicHash::Sha256);
     QElapsedTimer timer;
@@ -143,53 +143,53 @@ bool transfer(int source, int target, qint64 size, bool verify,
     qint64 done = 0;
     progress("writing", 0, size);
     while (done < size) {
-        if (cancelled()) { *error = "Avbrutt. USB-enheten inneholder et ufullstendig bilde og må skrives på nytt."; return false; }
+        if (cancelled()) { *error = "Cancelled. The USB device contains an incomplete image and must be written again."; return false; }
         const ssize_t count = ::read(source, buffer.data(), qMin<qint64>(buffer.size(), size - done));
         if (count < 0 && errno == EINTR) continue;
-        if (count <= 0) { *error = count == 0 ? "Bildefilen ble kortere under skriving." : systemError(); return false; }
+        if (count <= 0) { *error = count == 0 ? "The image was truncated during writing." : systemError(); return false; }
         if (verify) sourceHash.addData(QByteArrayView(buffer.constData(), count));
         ssize_t written = 0;
         while (written < count) {
-            if (cancelled()) { *error = "Avbrutt. USB-enheten må skrives på nytt."; return false; }
+            if (cancelled()) { *error = "Cancelled. The USB device must be written again."; return false; }
             const ssize_t result = ::write(target, buffer.constData() + written, count - written);
             if (result < 0 && errno == EINTR) continue;
-            if (result <= 0) { *error = "Skrivefeil: " + systemError(); return false; }
+            if (result <= 0) { *error = "Write error: " + systemError(); return false; }
             written += result;
         }
         done += count;
         if (timer.elapsed() >= 100 || done == size) { progress("writing", done, size); timer.restart(); }
     }
     progress("syncing", size, size);
-    if (::fsync(target)) { *error = "Kunne ikke fullføre skriving til enheten: " + systemError(); return false; }
-    if (cancelled()) { *error = "Avbrutt før fullført kontroll."; return false; }
+    if (::fsync(target)) { *error = "Could not finish writing to the device: " + systemError(); return false; }
+    if (cancelled()) { *error = "Cancelled before verification finished."; return false; }
     if (!verify) return true;
     // Flush and invalidate the block-device cache before reading the media again.
     struct stat targetInfo{};
     if (::fstat(target, &targetInfo)) { *error = systemError(); return false; }
     if (S_ISBLK(targetInfo.st_mode) && ::ioctl(target, BLKFLSBUF)) {
-        *error = "Kunne ikke tømme diskbufferen før verifisering: " + systemError(); return false;
+        *error = "Could not clear the disk cache before verification: " + systemError(); return false;
     }
     if (::lseek(target, 0, SEEK_SET) < 0) { *error = systemError(); return false; }
     QCryptographicHash targetHash(QCryptographicHash::Sha256);
     done = 0;
     progress("verifying", 0, size);
     while (done < size) {
-        if (cancelled()) { *error = "Verifiseringen ble avbrutt. USB-enheten er ikke verifisert."; return false; }
+        if (cancelled()) { *error = "Verification was cancelled. The USB device has not been verified."; return false; }
         const ssize_t count = ::read(target, buffer.data(), qMin<qint64>(buffer.size(), size - done));
         if (count < 0 && errno == EINTR) continue;
-        if (count <= 0) { *error = "Kunne ikke lese tilbake USB-enheten: " + systemError(); return false; }
+        if (count <= 0) { *error = "Could not read back the USB device: " + systemError(); return false; }
         targetHash.addData(QByteArrayView(buffer.constData(), count));
         done += count;
         if (timer.elapsed() >= 100 || done == size) { progress("verifying", done, size); timer.restart(); }
     }
-    if (sourceHash.result() != targetHash.result()) { *error = "Verifisering feilet: USB-innholdet samsvarer ikke med bildefilen."; return false; }
+    if (sourceHash.result() != targetHash.result()) { *error = "Verification failed: the USB contents do not match the image."; return false; }
     return true;
 }
 
 int runWriter(const QStringList &arguments)
 {
     auto fail = [](const QString &message) { emitEvent("error", 0, 0, message); return 1; };
-    if (arguments.size() != 9 || ::geteuid() != 0) return fail("Skriving krever administratorgodkjenning via pkexec.");
+    if (arguments.size() != 9 || ::geteuid() != 0) return fail("Writing requires administrator approval through pkexec.");
     const auto imagePath = arguments[2];
     const auto devicePath = arguments[3];
     const auto expectedSize = arguments[4].toLongLong();
@@ -198,7 +198,7 @@ int runWriter(const QStringList &arguments)
     const bool verify = arguments[7] == "verify";
     const QString expectedSequence = arguments[8];
     if (expectedImage.isEmpty() || !imagePath.startsWith('/') || !devicePath.startsWith("/dev/"))
-        return fail("Ugyldig bildefil eller enhet.");
+        return fail("Invalid image or device.");
     QString error;
     const auto devices = scan(&error);
     if (!error.isEmpty()) return fail(error);
@@ -207,31 +207,31 @@ int runWriter(const QStringList &arguments)
         if (value.toMap()["path"].toString() == devicePath) selected = value.toMap();
     if (selected.isEmpty() || selected["size"].toLongLong() != expectedSize || selected["serial"].toString() != expectedSerial
         || expectedSequence.isEmpty() || selected["sequence"].toString() != expectedSequence)
-        return fail("USB-enheten har blitt endret eller er ikke trygg å skrive til. Oppdater enhetslisten.");
-    if (selected["mounted"].toBool()) return fail("USB-enheten er montert. Avmonter alle partisjonene i filbehandleren og prøv igjen.");
+        return fail("The USB device has changed or is unsafe to write. Refresh the device list.");
+    if (selected["mounted"].toBool()) return fail("The USB device is mounted. Unmount all its partitions in your file manager and try again.");
     // Open the source with the invoking user's permissions, not root's permissions.
     bool uidOk = false;
     const uint callerUid = qEnvironmentVariable("PKEXEC_UID").toUInt(&uidOk);
-    if (!uidOk || ::seteuid(callerUid)) return fail("Kunne ikke kontrollere tilgang til bildefilen.");
+    if (!uidOk || ::seteuid(callerUid)) return fail("Could not check access to the image.");
     const int source = ::open(QFile::encodeName(imagePath).constData(), O_RDONLY | O_CLOEXEC | O_NOFOLLOW | O_NONBLOCK);
     const int sourceErrno = errno;
-    if (::seteuid(0)) { if (source >= 0) ::close(source); return fail("Kunne ikke gjenopprette skriverettigheter."); }
-    if (source < 0) { errno = sourceErrno; return fail("Kunne ikke åpne bildefilen: " + systemError()); }
+    if (::seteuid(0)) { if (source >= 0) ::close(source); return fail("Could not restore write permissions."); }
+    if (source < 0) { errno = sourceErrno; return fail("Could not open the image: " + systemError()); }
     struct stat sourceInfo{};
     if (::fstat(source, &sourceInfo) || !S_ISREG(sourceInfo.st_mode) || identity(sourceInfo) != expectedImage
         || sourceInfo.st_size <= 0 || sourceInfo.st_size > expectedSize) {
-        ::close(source); return fail("Bildefilen har blitt endret, er tom eller er større enn USB-enheten.");
+        ::close(source); return fail("The image has changed, is empty, or is larger than the USB device.");
     }
     // O_EXCL refuses mounted block devices, including mounted partitions.
     const int target = ::open(QFile::encodeName(devicePath).constData(), O_RDWR | O_EXCL | O_CLOEXEC | O_NOFOLLOW);
-    if (target < 0) { ::close(source); return fail("Kunne ikke låse USB-enheten for skriving: " + systemError()); }
+    if (target < 0) { ::close(source); return fail("Could not lock the USB device for writing: " + systemError()); }
     struct stat targetInfo{};
     quint64 actualSize = 0;
     quint64 actualSequence = 0;
     if (::fstat(target, &targetInfo) || !S_ISBLK(targetInfo.st_mode) || ::ioctl(target, BLKGETSIZE64, &actualSize)
         || actualSize != quint64(expectedSize) || ::ioctl(target, BLKGETDISKSEQ, &actualSequence)
         || actualSequence != expectedSequence.toULongLong() || sourceInfo.st_dev == targetInfo.st_rdev) {
-        ::close(source); ::close(target); return fail("Målet er ikke den forventede USB-blokkenheten.");
+        ::close(source); ::close(target); return fail("The target is not the expected USB block device.");
     }
     bool wasCancelled = false;
     auto cancelled = [&]() {
@@ -247,8 +247,8 @@ int runWriter(const QStringList &arguments)
     if (!result) ::fsync(target);
     ::close(target);
     if (!result) { emitEvent(wasCancelled ? "cancelled" : "error", 0, 0, error); return wasCancelled ? 2 : 1; }
-    if (!unchanged) return fail("Bildefilen ble endret under skriving. Skriv USB-enheten på nytt fra en uendret fil.");
-    emitEvent("complete", 0, 0, verify ? "USB-enheten er skrevet og verifisert. Du kan nå løse den ut." : "USB-enheten er skrevet. Verifisering var slått av. Du kan nå løse den ut.");
+    if (!unchanged) return fail("The image changed during writing. Write the USB device again from an unchanged file.");
+    emitEvent("complete", 0, 0, verify ? "The USB device has been written and verified. You can now eject it." : "The USB device has been written. Verification was disabled. You can now eject it.");
     return 0;
 }
 }

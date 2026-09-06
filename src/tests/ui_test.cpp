@@ -71,7 +71,7 @@ private slots:
         if (!backend.devices().isEmpty()) {
             backend.start(backend.devices().first().toMap()["path"].toString(), "wrong-device-identity", true);
             QVERIFY(!backend.busy());
-            QVERIFY(backend.detail().contains("byttet ut"));
+            QVERIFY(backend.detail().contains("replaced"));
         }
     }
 };

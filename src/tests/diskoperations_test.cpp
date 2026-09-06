@@ -67,7 +67,7 @@ private slots:
             [&](const QString &stage, qint64, qint64) {
                 if (stage == "verifying") QCOMPARE(::pwrite(target.handle(), "X", 1, 0), ssize_t(1));
             }, [] { return false; }, &error);
-        QVERIFY(!result); QVERIFY(error.contains("samsvarer ikke"));
+        QVERIFY(!result); QVERIFY(error.contains("do not match"));
     }
 
     void cancelBeforeWrite()
@@ -80,7 +80,7 @@ private slots:
         QVERIFY(!Disks::transfer(source.handle(), target.handle(), source.size(), false,
             [](const QString &, qint64, qint64) {}, [] { return true; }, &error));
         target.seek(0); QCOMPARE(target.readAll(), QByteArray("keep this data"));
-        QVERIFY(error.startsWith("Avbrutt"));
+        QVERIFY(error.startsWith("Cancelled"));
     }
 
     void rejectsTruncatedSource()
@@ -91,7 +91,7 @@ private slots:
         QString error;
         QVERIFY(!Disks::transfer(source.handle(), target.handle(), 500, false,
             [](const QString &, qint64, qint64) {}, [] { return false; }, &error));
-        QVERIFY(error.contains("kortere"));
+        QVERIFY(error.contains("truncated"));
     }
 
     void fileIdentityChanges()
