@@ -1,6 +1,0 @@
-module isowizard
-typeinfo isowizard.qmltypes
-prefer :/qt/qml/isowizard/
-Main 1.0 qml/Main.qml
-depends QtQuick
-

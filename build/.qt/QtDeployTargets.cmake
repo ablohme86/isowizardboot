@@ -1,6 +1,0 @@
-set(__QT_DEPLOY_TARGET_isowizard_FILE /home/alexander/projects/isowizard/build/src/IsoWizardBoot)
-set(__QT_DEPLOY_TARGET_isowizard_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_diskoperations_test_FILE /home/alexander/projects/isowizard/build/src/diskoperations_test)
-set(__QT_DEPLOY_TARGET_diskoperations_test_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_ui_test_FILE /home/alexander/projects/isowizard/build/src/ui_test)
-set(__QT_DEPLOY_TARGET_ui_test_TYPE EXECUTABLE)

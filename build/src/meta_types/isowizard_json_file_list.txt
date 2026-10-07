@@ -1,2 +1,0 @@
-/home/alexander/projects/isowizard/build/src/isowizard_autogen/include/../EWIEGA46WW/moc_backend.cpp.json
-/home/alexander/projects/isowizard/build/src/isowizard_autogen/include/../EWIEGA46WW/moc_settings.cpp.json
